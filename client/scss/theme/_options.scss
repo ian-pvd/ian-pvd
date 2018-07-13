@@ -13,7 +13,13 @@ $breakpoints: map-merge($breakpoints, $custom-breakpoints);
 /* Custom Colors
  * @see `../core/_colors.scss`
  */
-$custom-colors: ();
+$custom-colors: (
+	'green': hsl(120deg,33%,33%),
+	'green-dark': hsl(120deg,10%,20%),
+	'green-very-dark': hsl(120deg,5%,15%),
+	'green-light': hsl(120deg, 10%, 80%),
+	'green-very-light': hsl(120deg,5%,95%),
+);
 $colors: map-merge($colors, $custom-colors);
 
 /* Custom Font Families
