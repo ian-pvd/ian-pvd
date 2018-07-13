@@ -4,22 +4,26 @@
 
 .site-header {
 	align-items: center;
-	background-color: color(white);
-	border-bottom: 1px solid color(black);
-	display: flex;
-	height: $height--site-header;
+	background-color: $color-primary;
+	color: $color-secondary;
+	flex: 1 0 auto;
 	margin-bottom: $margin-bottom--site-header;
-	padding: spacer(0.5) spacer(1);
+	padding: spacer(1.5) 0;
 	width: 100%;
 	z-index: z-index(interface);
 }
 
 .site-header--sticky {
 	position: fixed;
+	height: $height--site-header;
 
 	& ~ .site-content {
 		padding-top: $height--site-header + $margin-bottom--site-header;
 	}
+}
+
+.site-header__wrapper {
+	display: flex;
 }
 
 .site-branding {
@@ -29,15 +33,15 @@
 }
 
 .site-title {
+	align-items: center;
 	display: flex;
 	font: $font-branding;
 	letter-spacing: 0.0125em;
-	line-height: 1;
 	margin: 0;
-	align-items: center;
+	text-transform: uppercase;
 
 	a {
-		color: $color-primary;
+		color: $color-secondary;
 		display: block;
 		text-decoration: none;
 	}
@@ -46,16 +50,16 @@
 .site-logo {
 	img,
 	svg {
-		width: auto;
 		height: $height--site-header-content;
+		width: auto;
 	}
 }
 
 .site-description {
-	display: flex;
+	align-items: center;
+	border-left: 1px solid color(grey-dark);
+	display: none;
+	line-height: 1;
 	margin-left: spacer(1);
 	padding-left: spacer(1);
-	border-left: 1px solid color(grey-dark);
-	align-items: center;
-	line-height: 1;
 }
