@@ -8,19 +8,19 @@
 */
 function ianpvd_get_versioned_asset( $asset ) {
 	$assets = array(
-		'site-js' => 'js/site.0fdd82b.bundle.min.js',
-		'site-css' => 'css/site.5a185efa6f6162698996.min.css',
-		'page-js' => 'js/page.0fdd82b.bundle.min.js',
-		'page-css' => 'css/page.5a185efa6f6162698996.min.css',
-		'home-js' => 'js/home.0fdd82b.bundle.min.js',
-		'home-css' => 'css/home.5a185efa6f6162698996.min.css',
-		'article-js' => 'js/article.0fdd82b.bundle.min.js',
-		'article-css' => 'css/article.5a185efa6f6162698996.min.css',
-		'archive-js' => 'js/archive.0fdd82b.bundle.min.js',
-		'archive-css' => 'css/archive.5a185efa6f6162698996.min.css',
-		'admin-js' => 'js/admin.0fdd82b.bundle.min.js',
-		'admin-css' => 'css/admin.5a185efa6f6162698996.min.css',
-		'common-js' => 'js/common.0fdd82b.bundle.min.js',
+		'site-js' => 'js/site.561b4d9.bundle.min.js',
+		'site-css' => 'css/site.7a5349151976d6482764.min.css',
+		'page-js' => 'js/page.561b4d9.bundle.min.js',
+		'page-css' => 'css/page.7a5349151976d6482764.min.css',
+		'home-js' => 'js/home.561b4d9.bundle.min.js',
+		'home-css' => 'css/home.7a5349151976d6482764.min.css',
+		'article-js' => 'js/article.561b4d9.bundle.min.js',
+		'article-css' => 'css/article.7a5349151976d6482764.min.css',
+		'archive-js' => 'js/archive.561b4d9.bundle.min.js',
+		'archive-css' => 'css/archive.7a5349151976d6482764.min.css',
+		'admin-js' => 'js/admin.561b4d9.bundle.min.js',
+		'admin-css' => 'css/admin.7a5349151976d6482764.min.css',
+		'common-js' => 'js/common.561b4d9.bundle.min.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }
