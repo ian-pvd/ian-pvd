@@ -25,7 +25,11 @@ $colors: map-merge($colors, $custom-colors);
 /* Custom Font Families
  * @see `../core/_typography.scss`
  */
-$custom-font-families: ();
+$custom-font-families: (
+	sans-serif: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+	serif: "'Noticia Text', Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman',  serif",
+	display: "'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+);
 $font-families: map-merge($font-families, $custom-font-families);
 
 /* Custom Z-Index
