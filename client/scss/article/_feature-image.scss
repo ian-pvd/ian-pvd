@@ -15,13 +15,13 @@
 
 .body__featured-image-layout--wide {
 	.site-main {
-		padding-top: calc(#{$site-width} * (9 / 16));
+		padding-top: calc(#{$width--site} * (9 / 16));
 	}
 }
 
 .body__featured-image-layout--large {
 	.site-main {
-		padding-top: calc(#{$site-width} * (2 / 3));
+		padding-top: calc(#{$width--site} * (2 / 3));
 	}
 }
 
@@ -48,7 +48,7 @@
 
 .featured-image-layout--wide {
 	left: 50%;
-	max-width: $site-width;
+	max-width: $width--site;
 	overflow: hidden;
 	position: absolute;
 	top: 0;
@@ -72,7 +72,7 @@
 	position: absolute;
 	top: 0;
 	transform: translateX(-50%);
-	width: $site-width;
+	width: $width--site;
 
 	.featured-image__frame {
 		@include aspect-ratio(3, 2);
