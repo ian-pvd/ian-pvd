@@ -1,10 +1,10 @@
 <?php
 /**
- * PVD Roundhouse Feature Image
+ * ian.pvd Feature Image
  *
  * Theme output tags
  *
- * @package roundhouse
+ * @package ianpvd
  */
 
 // Display the Featured Image
@@ -115,7 +115,7 @@ function pvd_the_featured_image( $classes = [] ) {
 		</div>
 		<?php if ( isset( $caption ) && isset( $caption_classes ) ) : ?>
 		<figcaption class="<?php esc_attr_e( $caption_classes ); ?>">
-			<?php _e( $caption, 'roundhouse' ); ?>
+			<?php _e( $caption, 'ianpvd' ); ?>
 		</figcaption>
 		<?php endif; ?>
 	</figure>

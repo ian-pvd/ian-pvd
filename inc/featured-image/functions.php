@@ -1,10 +1,10 @@
 <?php
 /**
- * PVD Roundhouse Feature Image
+ * ian.pvd Feature Image
  *
  * Theme handler functions
  *
- * @package roundhouse
+ * @package ianpvd
  */
 
 function pvd_get_featured_image_format() {

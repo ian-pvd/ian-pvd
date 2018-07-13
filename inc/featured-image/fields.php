@@ -1,10 +1,10 @@
 <?php
 /**
- * PVD Roundhouse Feature Image
+ * ian.pvd Feature Image
  *
  * Fieldmanager fields config
  *
- * @package roundhouse
+ * @package ianpvd
  */
 
 /**
@@ -26,7 +26,7 @@ function pvd_fm_group_feature_image() {
 		'children' => [
 			'layout' => new Fieldmanager_Select( [
 				'limit' => 1,
-				'label' => __( 'Image Layout', 'roundhouse' ),
+				'label' => __( 'Image Layout', 'ianpvd' ),
 				'attributes' => [
 					'style' => 'width: 100%',
 				],
@@ -39,12 +39,12 @@ function pvd_fm_group_feature_image() {
 					],
 				] ),
 				'default_value' => 'standard',
-				'description' => __( '<ul><li>Fullbleed: 100% viewport width & height.</li><li>Wide: 100% site max width, 16:9 ratio.</li><li>Large: 100% page width, 3:2 ratio.</li><li>Standard: Post width, as post content.</li></ul>', 'roundhouse' ),
+				'description' => __( '<ul><li>Fullbleed: 100% viewport width & height.</li><li>Wide: 100% site max width, 16:9 ratio.</li><li>Large: 100% page width, 3:2 ratio.</li><li>Standard: Post width, as post content.</li></ul>', 'ianpvd' ),
 				'escape' => [ 'description' => 'wp_kses_post' ],
 			] ),
 			'align' => new Fieldmanager_Select( [
 				'limit' => 1,
-				'label' => __( 'Image Alignment', 'roundhouse' ),
+				'label' => __( 'Image Alignment', 'ianpvd' ),
 				'attributes' => [
 					'style' => 'width: 100%',
 				],
@@ -56,10 +56,10 @@ function pvd_fm_group_feature_image() {
 					],
 				] ),
 				'default_value' => 'top',
-				'description' => __( 'Vertical photo alignment, if cropped.', 'roundhouse' ),
+				'description' => __( 'Vertical photo alignment, if cropped.', 'ianpvd' ),
 			] ),
 			'effects' => new Fieldmanager_Checkboxes( [
-				'label' => __( 'Image Effects', 'roundhouse' ),
+				'label' => __( 'Image Effects', 'ianpvd' ),
 				'datasource' => new Fieldmanager_Datasource( [
 					'options' => [
 						'grayscale' => 'Grayscale',
@@ -73,7 +73,7 @@ function pvd_fm_group_feature_image() {
 	] );
 
 	$fm->add_meta_box(
-		__( 'Featured Image Format', 'roundhouse' ),
+		__( 'Featured Image Format', 'ianpvd' ),
 		[ 'post', 'page' ],
 		'side',
 		'core'

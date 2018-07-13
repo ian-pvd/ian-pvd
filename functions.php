@@ -1,16 +1,16 @@
 <?php
 /**
- * roundhouse functions and definitions
+ * ian.pvd functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package roundhouse
+ * @package ianpvd
  */
 
-define( 'ROUNDHOUSE_PATH', dirname( __FILE__ ) );
-define( 'ROUNDHOUSE_URL', get_template_directory_uri() );
+define( 'IANPVD_PATH', dirname( __FILE__ ) );
+define( 'IANPVD_URL', get_template_directory_uri() );
 
-if ( ! function_exists( 'roundhouse_setup' ) ) :
+if ( ! function_exists( 'ianpvd_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -18,14 +18,14 @@ if ( ! function_exists( 'roundhouse_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function roundhouse_setup() {
+function ianpvd_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on roundhouse, use a find and replace
-	 * to change 'roundhouse' to the name of your theme in all the template files.
+	 * If you're building a theme based on ianpvd, use a find and replace
+	 * to change 'ianpvd' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'roundhouse', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'ianpvd', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -47,7 +47,7 @@ function roundhouse_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'roundhouse' ),
+		'menu-1' => esc_html__( 'Primary', 'ianpvd' ),
 	) );
 
 	/*
@@ -63,7 +63,7 @@ function roundhouse_setup() {
 	) );
 
 	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'roundhouse_custom_background_args', array(
+	add_theme_support( 'custom-background', apply_filters( 'ianpvd_custom_background_args', array(
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
@@ -75,7 +75,7 @@ function roundhouse_setup() {
 	add_theme_support( 'post-thumbnails' );
 }
 endif;
-add_action( 'after_setup_theme', 'roundhouse_setup' );
+add_action( 'after_setup_theme', 'ianpvd_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -84,36 +84,36 @@ add_action( 'after_setup_theme', 'roundhouse_setup' );
  *
  * @global int $content_width
  */
-function roundhouse_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'roundhouse_content_width', 640 );
+function ianpvd_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'ianpvd_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'roundhouse_content_width', 0 );
+add_action( 'after_setup_theme', 'ianpvd_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function roundhouse_widgets_init() {
+function ianpvd_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'roundhouse' ),
+		'name'          => esc_html__( 'Sidebar', 'ianpvd' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'roundhouse' ),
+		'description'   => esc_html__( 'Add widgets here.', 'ianpvd' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'roundhouse_widgets_init' );
+add_action( 'widgets_init', 'ianpvd_widgets_init' );
 
 // WordPress Underscores theme JS
-require_once ROUNDHOUSE_PATH . '/inc/wp-assets.php';
+require_once IANPVD_PATH . '/inc/wp-assets.php';
 // Generated asset versioning function.
 // NOTE: This is a auto-generated file, alter it manually at your own risk.
-require_once ROUNDHOUSE_PATH . '/inc/versioned-assets.php';
+require_once IANPVD_PATH . '/inc/versioned-assets.php';
 // Manage static assets (js and css).
-require_once ROUNDHOUSE_PATH . '/inc/assets.php';
+require_once IANPVD_PATH . '/inc/assets.php';
 
 /**
  * Add custom query vars.
@@ -131,12 +131,12 @@ add_filter( 'query_vars', function( $vars ) {
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
-function roundhouse_pingback_header() {
+function ianpvd_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		echo '<link rel="pingback" href="', esc_url( get_bloginfo( 'pingback_url' ) ), '">';
 	}
 }
-add_action( 'wp_head', 'roundhouse_pingback_header' );
+add_action( 'wp_head', 'ianpvd_pingback_header' );
 
 /**
  * Implement the Custom Header feature.
@@ -164,6 +164,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
- * Load PVD Roundhouse Feature Image functionality
+ * Load ian.pvd Feature Image functionality
  */
 require get_template_directory() . '/inc/featured-image/index.php';

@@ -1,5 +1,5 @@
 /**
- * Roundhouse Webpack Config
+ * ian.pvd Webpack Config
  */
 
 // Webpack dependencies

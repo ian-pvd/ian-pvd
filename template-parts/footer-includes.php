@@ -2,8 +2,8 @@
 /**
  * External, vendor and third-party includes for the theme footer.
  *
- * @package roundhouse
+ * @package ianpvd
  */
 
-?><!-- roundhouse footer includes -->
+?><!-- ianpvd footer includes -->
 <!-- Ex: GA Scripts -->

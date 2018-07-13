@@ -6,7 +6,7 @@
 * @param string $asset The asset name.
 * @return string The asset version.
 */
-function roundhouse_get_versioned_asset( $asset ) {
+function ianpvd_get_versioned_asset( $asset ) {
 	$assets = array(
 		'site-js' => 'js/site.0fdd82b.bundle.min.js',
 		'site-css' => 'css/site.5a185efa6f6162698996.min.css',
