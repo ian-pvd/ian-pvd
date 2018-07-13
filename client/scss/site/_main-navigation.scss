@@ -10,7 +10,9 @@
 .main-navigation {
 	display: flex;
 	flex: 1 1 auto;
+	font: 700 1rem/1 font-family(display);
 	max-height: 100%;
+	text-transform: uppercase;
 
 	> div[class^='menu'] {
 		margin-left: auto;
@@ -20,6 +22,8 @@
 		display: flex;
 
 		> li {
+			align-items: center;
+			display: flex;
 			margin: 0 0 0 spacer(1);
 
 			&:first-of-type {
@@ -27,6 +31,8 @@
 			}
 
 			a {
+				@include link-hover;
+				color: $color-secondary;
 				display: block;
 			}
 		}
