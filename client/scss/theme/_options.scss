@@ -13,13 +13,23 @@ $breakpoints: map-merge($breakpoints, $custom-breakpoints);
 /* Custom Colors
  * @see `../core/_colors.scss`
  */
-$custom-colors: ();
+$custom-colors: (
+	'green': hsl(120deg,33%,33%),
+	'green-dark': hsl(120deg,10%,20%),
+	'green-very-dark': hsl(120deg,5%,15%),
+	'green-light': hsl(120deg, 10%, 80%),
+	'green-very-light': hsl(120deg,5%,95%),
+);
 $colors: map-merge($colors, $custom-colors);
 
 /* Custom Font Families
  * @see `../core/_typography.scss`
  */
-$custom-font-families: ();
+$custom-font-families: (
+	sans-serif: "'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+	serif: "'Noticia Text', Garamond, Baskerville, 'Baskerville Old Face', 'Hoefler Text', 'Times New Roman',  serif",
+	display: "'Roboto Condensed', 'Helvetica Neue', Helvetica, Arial, sans-serif",
+);
 $font-families: map-merge($font-families, $custom-font-families);
 
 /* Custom Z-Index

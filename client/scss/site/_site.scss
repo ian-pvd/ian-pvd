@@ -36,5 +36,20 @@ img {
 
 .content-area {
 	width: 100%;
-	max-width: $content-width;
+	max-width: $width--content;
+}
+
+// Reusable wrapper classes
+.wrapper {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.wrapper--page {
+	max-width: $width--site;
+}
+
+.wrapper--content {
+	max-width: $width--content;
 }
