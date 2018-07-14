@@ -25,10 +25,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<div class="section">@TODO: SECTION 2</div>
-
 		</main><!-- #main -->
-		<?php get_sidebar(); ?>
 	</div><!-- #primary -->
 
 <?php
