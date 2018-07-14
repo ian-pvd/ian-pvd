@@ -7,10 +7,15 @@
  * @package ianpvd
  */
 
+$post_header_class = '';
+if ( pvd_get_the_post_header() ) {
+	$post_header_class = 'post-header--intro';
+}
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="post-header">
+	<header class="post-header <?php echo esc_attr( $post_header_class ) ?>"">
 
 		<?php
 			if ( has_post_thumbnail() ) {
@@ -18,9 +23,14 @@
 			}
 		?>
 
-		<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
-
-		<div>@TODO: EXCERPT</div>
+		<div class="post-header__content wrapper wrapper--content">
+			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
+			<?php if ( pvd_get_the_post_header() ) : ?>
+			<div class="post-header__intro">
+				<?php pvd_the_post_header(); ?>
+			</div>
+			<?php endif; ?>
+		</div>
 
 	</header><!-- .post-header -->
 

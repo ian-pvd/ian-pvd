@@ -167,3 +167,8 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load ian.pvd Feature Image functionality
  */
 require get_template_directory() . '/inc/featured-image/index.php';
+
+/**
+ * Load ian.pvd Post Header functionality
+ */
+require get_template_directory() . '/inc/post-header/index.php';

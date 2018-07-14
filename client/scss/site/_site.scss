@@ -10,6 +10,7 @@ html {
 }
 
 body {
+	color: $color-text;
 	font: $font-body;
 
 	@include breakpoints(none, medium) {
@@ -24,14 +25,25 @@ body,
 	height: 100%;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 .site {
 	display: flex;
 	flex-direction: column;
+}
+
+// Element Defauls & Resets
+h1,
+h2,
+h3,
+h4 {
+	font-family: font-family(display);
+	font-weight: 700;
+	letter-spacing: letter-spacing(-10);
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 // Reusable wrapper classes
