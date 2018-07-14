@@ -2,9 +2,16 @@
  *
  */
 
-.site-content {
+.site-content,
+.content-area,
+.site-main,
+.post,
+.page {
 	width: 100%;
-	max-width: $width--site;
-	margin: 0 auto spacer(1);
-	padding: 0 spacer(1);
+}
+
+.content-area,
+.site-main {
+	display: flex;
+	flex-direction: column;
 }
