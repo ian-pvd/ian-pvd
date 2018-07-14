@@ -9,13 +9,13 @@
 
 $post_header_class = '';
 if ( pvd_get_the_post_header() ) {
-	$post_header_class = 'post-header--intro';
+	$post_header_class = 'post-header--has-intro';
 }
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="post-header <?php echo esc_attr( $post_header_class ) ?>"">
+	<header class="post-header <?php echo esc_attr( $post_header_class ) ?>">
 
 		<?php
 			if ( has_post_thumbnail() ) {
@@ -34,7 +34,7 @@ if ( pvd_get_the_post_header() ) {
 
 	</header><!-- .post-header -->
 
-	<div class="post-content">
+	<div class="post-content wp-content wrapper wrapper--content">
 		<?php
 			the_content();
 
