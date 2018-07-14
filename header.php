@@ -24,27 +24,29 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ianpvd' ); ?></a>
 
-	<header id="masthead" class="site-header site-header--sticky" role="banner">
-		<div class="site-branding">
-			<?php
-			ianpvd_site_title();
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header__wrapper wrapper wrapper--page">
+			<div class="site-branding">
+				<?php
+				ianpvd_site_title();
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+				$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif; ?>
+			</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ianpvd' ); ?></button>
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				) );
-			?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
+				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ianpvd' ); ?></button>
+				<?php
+					wp_nav_menu( array(
+						'theme_location' => 'menu-1',
+						'menu_id'        => 'primary-menu',
+					) );
+				?>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
