@@ -14,16 +14,13 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'ianpvd' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'ianpvd' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'ianpvd' ), 'ianpvd', '<a href="https://pvdind.com/">PVD Industrial</a>' );
-			?>
+		<div class="wrapper wrapper--page">
+			<div class="site-info copyright">
+				<span class="copyright__author">
+					<a href="https://pvdind.com/"><?php echo get_bloginfo( 'name' ); ?></a>
+				</span>
+				<span class="copyright__year">1985 &ndash; 2018</span>
+			</div>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->
