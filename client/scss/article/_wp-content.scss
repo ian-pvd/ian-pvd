@@ -1,14 +1,11 @@
 /* WP Post Content Styles
  *
  * These styles are added to the theme wrapped inside a
- * `.post-content` selector inside the article loader file.
+ * `.wp-content` selector, inside the article loader file.
  * @see `./index.scss`
  */
 
 /* stylelint-disable block-no-empty */
-a {
-	color: $color-primary;
-}
 
 // Headers
 h1,
@@ -18,4 +15,88 @@ h4,
 h5,
 h6 {
 	font: $font-header;
+	letter-spacing: letter-spacing(50);
+	margin-bottom: spacer(1.5);
+	padding-top: spacer(1.5);
+	text-transform: uppercase;
+
+	&:first-child {
+		padding-top: 0;
+	}
+}
+
+h1,
+h2 {
+	border-bottom: 3px solid;
+	padding-bottom: spacer(0.75);
+}
+
+h2,
+h4 {
+	color: $color-primary;
+}
+
+h1 {
+	font-size: rem(32);
+}
+
+h2 {
+	font-size: rem(28);
+}
+
+h3 {
+	font-size: rem(24);
+}
+
+h4 {
+	font-size: rem(20);
+}
+
+// Links
+a {
+	@include link-hover;
+	color: $color-highlight;
+}
+
+// Body copy
+blockquote {
+	background: $color-secondary;
+	border-left: $border--heavy;
+	font-style: italic;
+	letter-spacing: letter-spacing(25);
+	padding: spacer(1);
+	padding-left: spacer(2);
+	padding-right: spacer(1.5);
+	text-indent: spacer(1);
+}
+
+// Lists
+ul,
+ol {
+	margin: 0 0 spacer(1) spacer(3);
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin: 0 0 0 spacer(1.5);
+}
+
+dl {
+
+}
+
+dt {
+
+}
+
+dd {
+
 }

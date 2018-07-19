@@ -32,8 +32,8 @@
 // Clear a float
 @mixin clearfix() {
 	&::after {
-		content: "";
 		clear: both;
+		content: "";
 	}
 }
 

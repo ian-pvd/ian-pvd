@@ -41,7 +41,9 @@ $width--content: 44rem;
 // Theme Layout Vars
 $height--site-header-content: rem(32);
 $height--site-header: spacer(5);
-$margin-bottom--site-header: spacer(1);
+$margin-bottom--site-header: 0;
 
 // Reusable Border
 $border--dotted-light: 1px dotted fade-out(color(white), 0.75);
+$border--solid-dark: 3px solid $color-text;
+$border--heavy: 6px solid $color-primary;

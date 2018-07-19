@@ -4,9 +4,34 @@
  */
 
 .site-footer {
-	background-color: color(white);
-	border-top: 1px solid color(black);
+	background-color: $color-text;
+	color: $color-background;
 	margin-top: auto;
-	padding: spacer(1);
+	padding: spacer(3) 0;
 	text-align: center;
+}
+
+.site-info {
+	color: $color-highlight;
+	display: flex;
+	flex-direction: column;
+	font-size: 0.75rem;
+	letter-spacing: 0.1em;
+	opacity: 0.5;
+	text-transform: uppercase;
+	transition: opacity 0.5s;
+
+	.site-footer:hover & {
+		opacity: 1;
+	}
+
+	.copyright__author {
+		margin-bottom: 0.125rem;
+	}
+
+	a {
+		color: $color-highlight;
+		text-decoration: none;
+		display: inline;
+	}
 }
