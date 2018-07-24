@@ -40,7 +40,7 @@ if ( pvd_get_the_post_header() ) {
 
 	<section class="repeating-content wrapper wrapper--content">
 		<div class="repeating-content__item wp-content">
-			<h2>@TODO: Repeating Content</h2>
+			<h2>@TODO: V2 Repeating Content</h2>
 			<div>
 				<p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec sed odio dui. Nullam quis risus eget urna mollis ornare vel eu leo. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
 			</div>
