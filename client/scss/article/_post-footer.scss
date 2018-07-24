@@ -13,6 +13,12 @@
 	font-size: rem(32);
 	letter-spacing: letter-spacing(10);
 	margin-bottom: spacer(2);
+	line-height: 1;
+}
+
+.post-list__description {
+	font-size: rem(14);
+	margin: spacer(-1) 0 spacer(1);
 }
 
 .post-list__feed--grid-thirds {

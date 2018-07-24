@@ -14,7 +14,7 @@ function pvd_get_post_list_defaults() {
 		'list_format' => 'grid-thirds',
 		'list_description' => NULL,
 		'post_format' => 'tout',
-		'list_query' => [
+		'query_vars' => [
 			'posts_per_page' => 3,
 			'post_category' => NULL,
 			'zone' => NULL,
