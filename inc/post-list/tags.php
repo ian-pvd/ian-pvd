@@ -55,11 +55,18 @@ function pvd_post_list( $args = [] ) {
 			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
 			<div class="post-list__description post-list__description--no-posts">
-				No posts found
+				<?php esc_html_e( 'No posts found', 'ianpvd' ); ?>
 			</div>
 		<?php endif; ?>
 
 		</div>
+
+		<?php if ( $args['read_more'] ) : ?>
+			<?php // TODO - v2, if 'true', use query results page 2 ?>
+			<a class="post-list__read-more" href="<?php echo esc_url( $args['read_more'] ); ?>">
+				<?php esc_html_e( $args['read_more_text'] ); ?>
+			</a>
+		<?php endif; ?>
 	</div>
 
 <?php
