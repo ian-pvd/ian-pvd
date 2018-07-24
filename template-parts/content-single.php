@@ -12,22 +12,26 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="post-header">
+
 		<?php
-			the_title( '<h1 class="post-title">', '</h1>' );
-			if ( 'post' === get_post_type() ) : ?>
-			<div class="post-meta">
-				<?php ianpvd_posted_on(); ?>
-			</div><!-- .post-meta -->
-		<?php
-		endif; ?>
+			// Featured Image
+			if ( has_post_thumbnail() ) {
+				get_template_part( 'template-parts/featured-image' );
+			}
+		?>
+
+		<div class="post-header__content wrapper wrapper--content">
+			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
+			<?php if ( 'post' === get_post_type() ) : ?>
+				<div class="post-meta">
+					<?php ianpvd_posted_on(); ?>
+				</div><!-- .post-meta -->
+			<?php endif; ?>
+		</div>
+
 	</header><!-- .post-header -->
 
-	<?php
-		// Featured Image
-		pvd_the_featured_image( [ 'post-thumbnail' ] );
-	?>
-
-	<div class="post-content">
+	<div class="post-content wp-content wrapper wrapper--content">
 		<?php
 			the_content( sprintf(
 				wp_kses(
@@ -39,7 +43,7 @@
 						),
 					)
 				),
-				get_the_title()
+				get_the_title();
 			) );
 
 			wp_link_pages( array(

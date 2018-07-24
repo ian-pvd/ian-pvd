@@ -27,14 +27,13 @@
 	</header><!-- .post-header -->
 
 	<?php
-	// check if the post has a Post Thumbnail assigned to it.
-	if ( has_post_thumbnail() ) {
-		?><div class="post-thumbnail"><?php
-		the_post_thumbnail();
-		?></div><?php
-	} ?>
+		// Featured Image
+		if ( has_post_thumbnail() ) {
+			get_template_part( 'template-parts/featured-image' );
+		}
+	?>
 
-	<div class="post-content">
+	<div class="post-content wp-content wrapper wrapper--content">
 		<?php
 			the_content( sprintf(
 				wp_kses(
