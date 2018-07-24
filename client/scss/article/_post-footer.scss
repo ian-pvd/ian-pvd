@@ -1,0 +1,54 @@
+/* Post Footer
+ *
+ * Styles for Post Footer
+ */
+
+.post-footer {
+	padding: spacer(3);
+	background-color: $color-secondary;
+}
+
+.post-footer__header {
+	font-size: rem(32);
+	letter-spacing: letter-spacing(10);
+	margin-bottom: spacer(2);
+}
+
+.post-footer__featured-posts {
+	@include grid(3, spacer(3), no-wrap);
+}
+
+.post-list__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-list__item-title {
+	font-size: rem(20);
+	line-height: calc(7 / 6);
+	margin-bottom: spacer(0.75);
+}
+
+.post-list__item-excerpt {
+	color: $color-primary;
+	font-size: rem(12);
+	line-height: calc(7 / 6);
+
+	// If item has thumbnail, don't show excerpt
+	.post-list__item-thumbnail ~ & {
+		display: none;
+	}
+}
+
+.post-thumbnail {
+	margin-bottom: spacer(1);
+}
+
+.post-thumbnail__frame {
+	@include aspect-ratio(16, 9);
+
+	img {
+		@include absolute-center();
+		@include image-fill();
+	}
+}

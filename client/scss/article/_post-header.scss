@@ -3,10 +3,30 @@
  * Styles for Single Post Header
  */
 
-.post-header {
-	margin-bottom: spacer(2);
+.post-header--has-intro {
+	background-color: $color-secondary;
+	border-bottom: $border--heavy;
+	margin-bottom: spacer(3);
+}
 
-	h1 {
-		font: $font-header;
+.post-header__content {
+	display: flex;
+	flex-direction: column;
+	padding: spacer(3) 0;
+}
+
+.post-title {
+	font-size: rem(48);
+	font-weight: 700;
+	line-height: 1;
+
+	.post-header--has-intro & {
+		margin-bottom: spacer(2);
 	}
+}
+
+.post-header__intro {
+	font-size: rem(20);
+	line-height: calc(4 / 3);
+	text-align: justify;
 }

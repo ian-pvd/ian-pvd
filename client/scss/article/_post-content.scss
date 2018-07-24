@@ -4,10 +4,14 @@
  */
 
 .post-content {
-	@include vertical-rhythym();
-	margin-bottom: spacer(2);
+	margin-bottom: spacer(6);
+}
+
+.wp-content {
+	@include vertical-rhythym(spacer(1.5));
 
 	> * {
 		max-width: 100%;
 	}
+
 }

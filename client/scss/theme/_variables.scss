@@ -13,35 +13,37 @@ $base-unit: $base-unit;
  * see `../core/_colors.scss`
  */
 
-$color-primary: color(green);
-$color-secondary: color(green-dark);
-$color-tertiary: color(red-dark);
-$color-highlight: color(red);
-$color-text: color(black);
-$color-background: color(white);
+$color-primary: color(green-dark);
+$color-secondary: color(green-light);
+// $color-tertiary: color(red-dark);
+$color-highlight: color(green);
+$color-text: color(green-very-dark);
+$color-background: color(green-very-light);
 
 /* Default Project Fonts
  * see `../core/_typography.scss`
  */
 
 $font-body: 1rem/#{calc(5/3)} font-family(sans-serif);
-$font-header: 700 1.5rem/#{calc(4/3)} font-family(sans-serif);
-$font-branding: 700 2rem/1 font-family(display);
+$font-header: 700 1.5rem/#{calc(4/3)} font-family(serif);
+$font-branding: 2rem/1 font-family(display);
 
 /* Project Variables
  * Custom theme values
  */
 
 // Max site width
-$site-width: 80rem;
+$width--site: 54rem;
 
 // Max content width
-$content-width: 36rem;
+$width--content: 44rem;
 
 // Theme Layout Vars
-$height--site-header-content: rem(26);
-$height--site-header: spacer(3);
-$margin-bottom--site-header: spacer(1);
+$height--site-header-content: rem(32);
+$height--site-header: spacer(5);
+$margin-bottom--site-header: 0;
 
 // Reusable Border
 $border--dotted-light: 1px dotted fade-out(color(white), 0.75);
+$border--solid-dark: 3px solid $color-text;
+$border--heavy: 6px solid $color-primary;

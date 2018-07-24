@@ -10,6 +10,8 @@ html {
 }
 
 body {
+	background: $color-background;
+	color: $color-text;
 	font: $font-body;
 
 	@include breakpoints(none, medium) {
@@ -24,17 +26,38 @@ body,
 	height: 100%;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
-
 .site {
 	display: flex;
 	flex-direction: column;
 }
 
-.content-area {
+// Element Defauls & Resets
+h1,
+h2,
+h3,
+h4 {
+	font-family: font-family(display);
+	font-weight: 700;
+	letter-spacing: letter-spacing(-10);
+	text-transform: uppercase;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+// Reusable wrapper classes
+.wrapper {
+	display: block;
+	margin: 0 auto;
 	width: 100%;
-	max-width: $content-width;
+}
+
+.wrapper--page {
+	max-width: $width--site;
+}
+
+.wrapper--content {
+	max-width: $width--content;
 }
