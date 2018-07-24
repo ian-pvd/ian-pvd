@@ -14,7 +14,7 @@
 /**
  * Load ian.pvd Post List handler functions
  */
-// require get_template_directory() . '/inc/post-header/functions.php';
+require get_template_directory() . '/inc/post-list/functions.php';
 
 /**
  * Load ian.pvd Post List theme output tags

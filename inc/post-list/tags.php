@@ -1,28 +1,22 @@
+
 <?php
 /**
  * Display a post list
  *
  */
 
-function pvd_post_list( $context = 'recent-posts', $list_title = 'Recent Posts', $args = [] ) {
-	// Default post list args
-	$defaults = [
-		'list_format' => 'grid-thirds',
-		'list_description' => NULL,
-		'post_format' => 'tout',
-		'list_query' => [
-			'post_count' => 3,
-			'post_category' => NULL,
-			'zone' => NULL,
-		],
-	];
+function pvd_post_list( $args = [] ) {
 
 	// Parse user args with defaults
-	$args = wp_parse_args( $args, $defaults );
+	$args = wp_parse_args( $args, pvd_get_post_list_defaults() );
 
 	// Set up template vars
+	$context = $args['context'];
+	$list_title = $args['list_title'];
 	$post_format = 'post-list__item--' . $args['post_format'];
 	$list_format = 'post-list__feed--' . $args['list_format'];
+
+	wp_reset_postdata();
 
 	// Get the post list
 	if ( isset( $args['list_query']['zone'] ) ) {
@@ -30,7 +24,7 @@ function pvd_post_list( $context = 'recent-posts', $list_title = 'Recent Posts',
 		// @TODO
 	} else {
 		// Query posts using list args
-		$the_query = new WP_Query ( $args['list_query'] );
+		$post_list_query = new WP_Query ($args['list_query']);
 	}
 ?>
 
@@ -50,21 +44,32 @@ function pvd_post_list( $context = 'recent-posts', $list_title = 'Recent Posts',
 
 	<div class="post-list__feed post-list__feed--<?php esc_attr_e( $context ); ?> <?php esc_attr_e( $list_format ) ?>">
 
-	<?php if ( $the_query->have_posts() ) : ?>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	<?php if ( $post_list_query->have_posts() ) : ?>
+		<?php while ( $post_list_query->have_posts() ) : $post_list_query->the_post(); ?>
 
 			<?php // get_template_part( 'template-parts/content', 'list-tout' ); ?>
 
 			<article class="post-list__item <?php esc_attr_e( $post_format ); ?>">
+
+				<?php if ( has_post_thumbnail() ) : ?>
 				<figure class="post-list__item-thumbnail post-thumbnail">
-					<div class="post-thumbnail__frame">
-						<img src="https://breath35.files.wordpress.com/2012/05/201377_199046263449473_156329461054487_602947_7963888_o.jpg" alt="">
-					</div>
+					<a href="<?php the_permalink(); ?>" class="post-thumbnail__frame">
+						<?php the_post_thumbnail(); ?>
+					</a>
 				</figure>
-				<h1 class="post-list__item-title">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</h1>
+				<?php endif; ?>
+
+				<h2 class="post-list__item-title">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_title(); ?>
+					</a>
+				</h2>
+
+				<?php if ( pvd_get_the_post_header() ) : ?>
 				<div class="post-list__item-excerpt">
-					<p>Donec sed odio dui. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</p>
+					<?php pvd_the_post_header(); ?>
 				</div>
+				<?php endif; ?>
 			</article>
 
 		<?php endwhile; ?>
