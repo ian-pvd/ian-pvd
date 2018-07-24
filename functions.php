@@ -171,4 +171,9 @@ require IANPVD_PATH . '/inc/featured-image/index.php';
 /**
  * Load ian.pvd Post Header functionality
  */
-require get_template_directory() . '/inc/post-header/index.php';
+require IANPVD_PATH . '/inc/post-header/index.php';
+
+/**
+ * Load ian.pvd Post Header functionality
+ */
+require IANPVD_PATH . '/inc/post-list/index.php';

@@ -8,14 +8,19 @@
 	background-color: $color-secondary;
 }
 
-.post-footer__header {
+// Post list styles
+.post-list__header {
 	font-size: rem(32);
 	letter-spacing: letter-spacing(10);
 	margin-bottom: spacer(2);
 }
 
-.post-footer__featured-posts {
-	@include grid(3, spacer(3), no-wrap);
+.post-list__feed--grid-thirds {
+	@include grid(3, spacer(3), wrap);
+}
+
+.post-list__feed--featured-posts {
+	@include grid(2, spacer(3), wrap);
 }
 
 .post-list__item {
