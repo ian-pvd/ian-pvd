@@ -13,17 +13,26 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
+			// Front Page WP Content
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				get_template_part( 'template-parts/content', 'page-front' );
 
 			endwhile; // End of the loop.
 			?>
+
+			<section>
+				LATEST POSTS (ZONE)
+			</section>
+
+			<section>
+				WORK (ZONE, CPT)
+				3 CODEPEN, GITHUB OR PROJECT ITEMS
+			</section>
+
+			<section>
+				SOCIAL MEDIA
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

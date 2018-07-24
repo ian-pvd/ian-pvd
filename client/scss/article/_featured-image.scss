@@ -16,7 +16,7 @@
 	position: relative;
 
 	img {
-		@include absolute-center();
+		@include absolute-pinned();
 		@include image-fill();
 	}
 }

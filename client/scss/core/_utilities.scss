@@ -72,7 +72,7 @@
 @mixin image-fill() {
 	height: 100%;
 	object-fit: cover;
-	object-position: 50% 0;
+	object-position: 50% 50%;
 	width: 100%;
 }
 
