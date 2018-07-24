@@ -49,28 +49,7 @@ if ( pvd_get_the_post_header() ) {
 
 	<footer class="post-footer">
 
-		<div class="post-footer__wrapper wrapper wrapper--page">
-			<h2 class="post-footer__header">Featured Posts</h2>
-			<div class="post-footer__featured-posts post-list">
-
-			<?php for ( $i = 0; $i < 3; $i++ ) { ?>
-
-				<article class="post-list__item">
-					<figure class="post-list__item-thumbnail post-thumbnail">
-						<div class="post-thumbnail__frame">
-							<img src="https://breath35.files.wordpress.com/2012/05/201377_199046263449473_156329461054487_602947_7963888_o.jpg" alt="">
-						</div>
-					</figure>
-					<h1 class="post-list__item-title">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</h1>
-					<div class="post-list__item-excerpt">
-						<p>Donec sed odio dui. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</p>
-					</div>
-				</article>
-
-			<?php } ?>
-
-			</div>
-		</div>
+		<?php pvd_post_list(); ?>
 
 		<?php // get_sidebar(); ?>
 
