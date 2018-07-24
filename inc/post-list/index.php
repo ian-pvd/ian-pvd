@@ -5,12 +5,6 @@
  * @package ianpvd
  */
 
-
-/**
- * Load ian.pvd Post List Fieldmanager configuration
- */
-// require get_template_directory() . '/inc/post-header/fields.php';
-
 /**
  * Load ian.pvd Post List handler functions
  */

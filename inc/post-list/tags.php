@@ -1,7 +1,8 @@
-
 <?php
 /**
- * Display a post list
+ * ian.pvd Post List
+ *
+ * Post list display functions
  *
  */
 
@@ -29,35 +30,37 @@ function pvd_post_list( $args = [] ) {
 	}
 ?>
 
-<div class="post-list post-list--<?php esc_attr_e( $context ); ?> wrapper wrapper--page">
+	<div class="post-list post-list--<?php esc_attr_e( $context ); ?> wrapper wrapper--page">
 
-	<?php if ( $list_title ) : ?>
-	<h2 class="post-list__header post-list__header--<?php esc_attr_e( $context ); ?>">
-			<?php esc_html_e( $list_title ); ?>
-	</h2>
-	<?php endif; ?>
+		<?php if ( $list_title ) : ?>
+		<h2 class="post-list__header post-list__header--<?php esc_attr_e( $context ); ?>">
+				<?php esc_html_e( $list_title ); ?>
+		</h2>
+		<?php endif; ?>
 
-	<?php if ( $args['list_description'] ) : ?>
-	<div class="post-list__description post-list__description--<?php esc_attr_e( $context ); ?>">
-		<?php esc_html_e( $args['list_description'] ); ?>
+		<?php if ( $args['list_description'] ) : ?>
+		<div class="post-list__description post-list__description--<?php esc_attr_e( $context ); ?>">
+			<?php esc_html_e( $args['list_description'] ); ?>
+		</div>
+		<?php endif; ?>
+
+		<div class="post-list__feed post-list__feed--<?php esc_attr_e( $context ); ?> <?php esc_attr_e( $list_format ) ?>">
+
+		<?php if ( $post_list_query->have_posts() ) : ?>
+			<?php while ( $post_list_query->have_posts() ) : $post_list_query->the_post(); ?>
+
+				<?php get_template_part( 'template-parts/content', $template_part ); ?>
+
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		<?php else : ?>
+			<div class="post-list__description post-list__description--no-posts">
+				No posts found
+			</div>
+		<?php endif; ?>
+
+		</div>
 	</div>
-	<?php endif; ?>
-
-	<div class="post-list__feed post-list__feed--<?php esc_attr_e( $context ); ?> <?php esc_attr_e( $list_format ) ?>">
-
-	<?php if ( $post_list_query->have_posts() ) : ?>
-		<?php while ( $post_list_query->have_posts() ) : $post_list_query->the_post(); ?>
-
-			<?php get_template_part( 'template-parts/content', $template_part ); ?>
-
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-	<?php else : ?>
-		No Results
-	<?php endif; ?>
-
-	</div>
-</div>
 
 <?php
 }
