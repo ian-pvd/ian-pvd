@@ -50,6 +50,20 @@
 	}
 }
 
+.post-list__read-more {
+	display: block;
+	font-size: rem(14);
+	font-weight: 700;
+	letter-spacing: letter-spacing(100);
+	text-align: right;
+	text-transform: uppercase;
+
+	a {
+		@include link-hover;
+		color: inherit;
+	}
+}
+
 .post-thumbnail {
 	margin-bottom: spacer(1);
 }

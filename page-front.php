@@ -36,6 +36,9 @@ get_header(); ?>
 					pvd_post_list( [
 						'context' => 'recent-work',
 						'list_title' => 'Recent Work',
+						'query_vars' => [
+							'post_type' => 'work',
+						],
 						'read_more' => get_post_type_archive_link( 'work' ),
 						'read_more_text' => 'View More',
 					] );

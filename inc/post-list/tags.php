@@ -61,11 +61,13 @@ function pvd_post_list( $args = [] ) {
 
 		</div>
 
-		<?php if ( $args['read_more'] ) : ?>
-			<?php // TODO - v2, if 'true', use query results page 2 ?>
-			<a class="post-list__read-more" href="<?php echo esc_url( $args['read_more'] ); ?>">
-				<?php esc_html_e( $args['read_more_text'] ); ?>
-			</a>
+		<?php if ( $args['read_more'] && ( $post_list_query->found_posts > $post_list_query->post_count ) ) : ?>
+			<?php // TODO - v2, if read_more = bool(true), and not a custom link, use the query results page link ?>
+			<div class="post-list__read-more">
+				<a href="<?php echo esc_url( $args['read_more'] ); ?>">
+					<?php esc_html_e( $args['read_more_text'] ); ?>
+				</a>
+			</div>
 		<?php endif; ?>
 	</div>
 
