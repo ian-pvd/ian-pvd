@@ -1,0 +1,12 @@
+/* Home Styles
+ *
+ * Styles for the Front Page
+ */
+
+.home-section {
+	padding: spacer(3) 0;
+
+	&:nth-child(even) {
+		background: $color-secondary;
+	}
+}

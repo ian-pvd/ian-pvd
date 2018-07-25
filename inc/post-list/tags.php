@@ -52,14 +52,22 @@ function pvd_post_list( $args = [] ) {
 				<?php get_template_part( 'template-parts/content', $template_part ); ?>
 
 			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
 			<div class="post-list__description post-list__description--no-posts">
-				No posts found
+				<?php esc_html_e( 'No posts found', 'ianpvd' ); ?>
 			</div>
 		<?php endif; ?>
 
 		</div>
+
+		<?php if ( $args['read_more'] && ( $post_list_query->found_posts > $post_list_query->post_count ) ) : ?>
+			<?php // TODO - v2, if read_more = bool(true), and not a custom link, use the query results page link ?>
+			<div class="post-list__read-more">
+				<a href="<?php echo esc_url( $args['read_more'] ); ?>">
+					<?php esc_html_e( $args['read_more_text'] ); ?>
+				</a>
+			</div>
+		<?php endif; ?>
 	</div>
 
 <?php

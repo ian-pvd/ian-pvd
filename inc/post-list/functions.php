@@ -19,6 +19,8 @@ function pvd_get_post_list_defaults() {
 			'post_category' => NULL,
 			'zone' => NULL,
 		],
+		'read_more' => false,
+		'read_more_text' => 'Read More',
 	];
 
 	return $defaults;

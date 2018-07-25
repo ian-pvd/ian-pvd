@@ -25,7 +25,7 @@
 	</h2>
 
 	<?php if ( pvd_get_the_post_header() ) : ?>
-	<div class="post-list__item-excerpt">
+	<div class="post-list__item-excerpt wp-content">
 		<?php pvd_the_post_header(); ?>
 	</div>
 	<?php endif; ?>

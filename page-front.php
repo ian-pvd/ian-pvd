@@ -21,16 +21,31 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
-			<section>
-				LATEST POSTS (ZONE)
+			<section class="home-section home-section--recent-posts">
+				<?php
+					// TODO – v2, Replace with featured posts zone
+					pvd_post_list( [
+						'read_more' => get_post_type_archive_link( 'post' ),
+					] );
+				?>
 			</section>
 
-			<section>
-				WORK (ZONE, CPT)
-				3 CODEPEN, GITHUB OR PROJECT ITEMS
+			<section class="home-section home-section--portfolio">
+				<?php
+					// TODO – WORK (ZONE, CPT), 3 CODEPEN, GITHUB OR PROJECT ITEMS
+					pvd_post_list( [
+						'context' => 'recent-work',
+						'list_title' => 'Recent Work',
+						'query_vars' => [
+							'post_type' => 'work',
+						],
+						'read_more' => get_post_type_archive_link( 'work' ),
+						'read_more_text' => 'View More',
+					] );
+				?>
 			</section>
 
-			<section>
+			<section class="home-section home-section--">
 				SOCIAL MEDIA
 			</section>
 
