@@ -52,7 +52,6 @@ function pvd_post_list( $args = [] ) {
 				<?php get_template_part( 'template-parts/content', $template_part ); ?>
 
 			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
 		<?php else : ?>
 			<div class="post-list__description post-list__description--no-posts">
 				<?php esc_html_e( 'No posts found', 'ianpvd' ); ?>
