@@ -1,7 +1,10 @@
 <?php
 /**
- * Custom Post Type Description
+ * Portfolio Work Custom Post Type
+ *
+ * @package ianpvd
  */
+
 class IANPVD_Custom_Post_Type_Work {
 
 	/**
@@ -12,7 +15,7 @@ class IANPVD_Custom_Post_Type_Work {
 	}
 
 	/**
-	 * Create Multimedia post type
+	 * Define Work post type
 	 */
 	public function create_post_type() {
 		$labels = [

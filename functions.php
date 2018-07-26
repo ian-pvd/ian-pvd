@@ -189,6 +189,6 @@ require_once IANPVD_PATH . '/inc/post-header/index.php';
 require_once IANPVD_PATH . '/inc/post-list/index.php';
 
 /**
- * Load Library metadata functionality
+ * Load ian.pvd Portfolio Work functionality
  */
 require_once IANPVD_PATH . '/inc/portfolio-work/index.php';
