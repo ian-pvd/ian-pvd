@@ -39,12 +39,20 @@ function pvd_fm_group_work_item() {
 					],
 				] ),
 			] ),
+			// External Permalink - Link directly to project
+			'external_permalink' => new Fieldmanager_Checkbox( [
+				'label' => __( 'Link directly to project', 'ianpvd' ),
+			] ),
 			// Link(s) – Add one or more external links
 			'link' => new Fieldmanager_Link( [
 				'add_more_label' => __( 'Add another link', 'ianpvd' ),
 				'extra_elements' => 1,
 				'label' => __( 'Link', 'ianpvd' ),
 				'limit' => 0,
+			] ),
+			// Project Date
+			'date' => new Fieldmanager_Datepicker( [
+				'label' => __( 'Project Date', 'ianpvd' ),
 			] ),
 		],
 	] );
