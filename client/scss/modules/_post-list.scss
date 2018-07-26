@@ -30,6 +30,7 @@
 
 .post-list__item-title {
 	@include item-subheader;
+	margin-bottom: spacer(0.75);
 }
 
 .post-list__item-excerpt {
