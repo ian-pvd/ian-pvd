@@ -1,0 +1,17 @@
+<?php
+/**
+ * The sidebar containing the main widget area
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package ianpvd
+ */
+
+if ( ! is_active_sidebar( 'social-widgets' ) ) {
+	return;
+}
+?>
+
+<aside class="widget-area widget-area--social wrapper wrapper--page" role="complementary">
+	<?php dynamic_sidebar( 'social-widgets' ); ?>
+</aside>

@@ -45,8 +45,8 @@ get_header(); ?>
 				?>
 			</section>
 
-			<section class="home-section home-section--">
-				SOCIAL MEDIA
+			<section class="home-section home-section--social">
+				<?php get_sidebar( 'social' ); ?>
 			</section>
 
 		</main><!-- #main -->
