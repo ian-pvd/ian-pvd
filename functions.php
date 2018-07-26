@@ -169,6 +169,11 @@ require get_template_directory() . '/inc/jetpack.php';
 require_once IANPVD_PATH . '/inc/widgets/index.php';
 
 /**
+ *	Include Work Post Type (CPT: work)
+ */
+require_once IANPVD_PATH . '/inc/post-types/class-ianpvd-post-type-work.php';
+
+/**
  * Load ian.pvd Feature Image functionality
  */
 require_once IANPVD_PATH . '/inc/featured-image/index.php';
@@ -182,3 +187,8 @@ require_once IANPVD_PATH . '/inc/post-header/index.php';
  * Load ian.pvd Post Header functionality
  */
 require_once IANPVD_PATH . '/inc/post-list/index.php';
+
+/**
+ * Load ian.pvd Portfolio Work functionality
+ */
+require_once IANPVD_PATH . '/inc/portfolio-work/index.php';
