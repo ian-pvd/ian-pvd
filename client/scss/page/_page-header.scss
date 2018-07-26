@@ -1,0 +1,22 @@
+/* Page Header
+ *
+ * Styles for Single Page Header
+ */
+
+.post-header--page.post-header--has-intro {
+	background-color: $color-secondary;
+	border-bottom: $border--heavy;
+	margin-bottom: spacer(3);
+}
+
+.post-header__content--page {
+	display: flex;
+	flex-direction: column;
+	padding: spacer(3) 0;
+}
+
+.post-title--page {
+	.post-header--has-intro & {
+		margin-bottom: spacer(2);
+	}
+}

@@ -15,7 +15,7 @@ if ( pvd_get_the_post_header() ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="post-header <?php echo esc_attr( $post_header_class ) ?>">
+	<header class="post-header post-header--page <?php echo esc_attr( $post_header_class ) ?>">
 
 		<?php
 			// Featured Image
@@ -24,8 +24,8 @@ if ( pvd_get_the_post_header() ) {
 			}
 		?>
 
-		<div class="post-header__content wrapper wrapper--content">
-			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
+		<div class="post-header__content post-header__content--page wrapper wrapper--content">
+			<?php the_title( '<h1 class="post-title post-title--page">', '</h1>' ); ?>
 			<?php if ( pvd_get_the_post_header() ) : ?>
 			<div class="post-header__intro wp-content">
 				<?php pvd_the_post_header(); ?>
