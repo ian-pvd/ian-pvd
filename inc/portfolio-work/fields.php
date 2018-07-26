@@ -8,6 +8,10 @@
  */
 
 function pvd_fm_group_work_item() {
+
+	// Get Web Development term id for select dropdown
+	$term_web_development = get_term_by('slug', 'web-development', 'category');
+
 	$fm = new Fieldmanager_Group( [
 		'name' => 'work_item',
 		'children' => [
@@ -35,7 +39,7 @@ function pvd_fm_group_work_item() {
 				'datasource' => new Fieldmanager_Datasource_Term( [
 					'taxonomy' => 'category',
 					'taxonomy_args' => [
-						'child_of' => 5, // TODO ! Magic number, get "web dev" term ID
+						'child_of' => $term_web_development->term_id,
 					],
 				] ),
 			] ),
