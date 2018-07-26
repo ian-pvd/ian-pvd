@@ -1,81 +1,74 @@
 <?php
 /**
- * Display a post list
+ * ian.pvd Post List
+ *
+ * Post list display functions
  *
  */
 
-function pvd_post_list( $context = 'recent-posts', $list_title = 'Recent Posts', $args = [] ) {
-	// Default post list args
-	$defaults = [
-		'list_format' => 'grid-thirds',
-		'list_description' => NULL,
-		'post_format' => 'tout',
-		'list_query' => [
-			'post_count' => 3,
-			'post_category' => NULL,
-			'zone' => NULL,
-		],
-	];
+function pvd_post_list( $args = [] ) {
 
 	// Parse user args with defaults
-	$args = wp_parse_args( $args, $defaults );
+	$args = wp_parse_args( $args, pvd_get_post_list_defaults() );
 
 	// Set up template vars
+	$context = $args['context'];
+	$list_title = $args['list_title'];
 	$post_format = 'post-list__item--' . $args['post_format'];
 	$list_format = 'post-list__feed--' . $args['list_format'];
+	$template_part = 'list-' . $args['post_format'];
+
+	wp_reset_postdata();
 
 	// Get the post list
-	if ( isset( $args['list_query']['zone'] ) ) {
+	if ( isset( $args['query_vars']['zone'] ) ) {
 		// If zone is requested, return zone posts
 		// @TODO
 	} else {
 		// Query posts using list args
-		$the_query = new WP_Query ( $args['list_query'] );
+		$post_list_query = new WP_Query ( $args['query_vars'] );
 	}
 ?>
 
-<div class="post-list post-list--<?php esc_attr_e( $context ); ?> wrapper wrapper--page">
+	<div class="post-list post-list--<?php esc_attr_e( $context ); ?> wrapper wrapper--page">
 
-	<?php if ( $list_title ) : ?>
-	<h2 class="post-list__header post-list__header--<?php esc_attr_e( $context ); ?>">
-			<?php esc_html_e( $list_title ); ?>
-	</h2>
-	<?php endif; ?>
+		<?php if ( $list_title ) : ?>
+		<h2 class="post-list__header post-list__header--<?php esc_attr_e( $context ); ?>">
+				<?php esc_html_e( $list_title ); ?>
+		</h2>
+		<?php endif; ?>
 
-	<?php if ( $args['list_description'] ) : ?>
-	<div class="post-list__description post-list__description--<?php esc_attr_e( $context ); ?>">
-		<?php esc_html_e( $args['list_description'] ); ?>
+		<?php if ( $args['list_description'] ) : ?>
+		<div class="post-list__description post-list__description--<?php esc_attr_e( $context ); ?>">
+			<?php esc_html_e( $args['list_description'] ); ?>
+		</div>
+		<?php endif; ?>
+
+		<div class="post-list__feed post-list__feed--<?php esc_attr_e( $context ); ?> <?php esc_attr_e( $list_format ) ?>">
+
+		<?php if ( $post_list_query->have_posts() ) : ?>
+			<?php while ( $post_list_query->have_posts() ) : $post_list_query->the_post(); ?>
+
+				<?php get_template_part( 'template-parts/content', $template_part ); ?>
+
+			<?php endwhile; ?>
+		<?php else : ?>
+			<div class="post-list__description post-list__description--no-posts">
+				<?php esc_html_e( 'No posts found', 'ianpvd' ); ?>
+			</div>
+		<?php endif; ?>
+
+		</div>
+
+		<?php if ( $args['read_more'] && ( $post_list_query->found_posts > $post_list_query->post_count ) ) : ?>
+			<?php // TODO - v2, if read_more = bool(true), and not a custom link, use the query results page link ?>
+			<div class="post-list__read-more">
+				<a href="<?php echo esc_url( $args['read_more'] ); ?>">
+					<?php esc_html_e( $args['read_more_text'] ); ?>
+				</a>
+			</div>
+		<?php endif; ?>
 	</div>
-	<?php endif; ?>
-
-	<div class="post-list__feed post-list__feed--<?php esc_attr_e( $context ); ?> <?php esc_attr_e( $list_format ) ?>">
-
-	<?php if ( $the_query->have_posts() ) : ?>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-
-			<?php // get_template_part( 'template-parts/content', 'list-tout' ); ?>
-
-			<article class="post-list__item <?php esc_attr_e( $post_format ); ?>">
-				<figure class="post-list__item-thumbnail post-thumbnail">
-					<div class="post-thumbnail__frame">
-						<img src="https://breath35.files.wordpress.com/2012/05/201377_199046263449473_156329461054487_602947_7963888_o.jpg" alt="">
-					</div>
-				</figure>
-				<h1 class="post-list__item-title">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</h1>
-				<div class="post-list__item-excerpt">
-					<p>Donec sed odio dui. Donec sed odio dui. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor.</p>
-				</div>
-			</article>
-
-		<?php endwhile; ?>
-		<?php wp_reset_postdata(); ?>
-	<?php else : ?>
-		No Results
-	<?php endif; ?>
-
-	</div>
-</div>
-
 
 <?php
 }

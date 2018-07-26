@@ -1,0 +1,102 @@
+/* Widget & Sidebar Styles
+ *
+ * Layout & Styles for site widgets
+ */
+
+.widget-area--social {
+	@include grid(3, spacer(3));
+	width: 100%;
+}
+
+.widget__title {
+	@include item-subheader;
+}
+
+// Specific Widget Styles
+// These styles override inline and external !important declaration
+/* stylelint-disable declaration-no-important */
+.widget {
+
+	// Social Widgets
+	.widget-area--social & {
+		display: flex;
+		flex-direction: column;
+
+		.textwidget {
+			flex: 1 0 auto;
+			position: relative;
+		}
+	}
+
+	// Social Links Menu Widget
+	[class^="menu-social-links"] {
+		ul {
+			@include vertical-rhythym(spacer(0.5), spacer(0.5), $border--dotted-light);
+		}
+
+		a {
+			@include link-hover;
+			color: inherit;
+			display: flex;
+			font-size: rem(14);
+			align-items: center;
+
+			&::before {
+				@include pseudo-block;
+				background: url('../../img/icon-star.svg') center no-repeat;
+				margin-right: spacer(0.5);
+				background-size: 100% auto;
+			}
+
+			@each $link in twitter, github, codepen, wordpress, linkedin {
+				&[href*="#{$link}"]::before {
+					background-image: url('../../img/icon-#{$link}.svg');
+				}
+			}
+		}
+	}
+
+	// Twitter Widget
+	.fts-twitter-div {
+		background: $color-background;
+		color: $color-primary;
+
+		.tweeter-info {
+			border-bottom: none;
+			padding: spacer(1) 0;
+		}
+
+		a {
+			color: $color-highlight;
+
+			&.fts-powered-by-text {
+				display: none !important;
+			}
+		}
+
+		.fts-tweet-others-right {
+			margin: 0 rem(5) 0 rem(55);
+		}
+	}
+
+	// Flickr Widget
+	.justified-gallery {
+		@include absolute-pinned;
+		height: 100% !important;
+
+		a {
+			@include aspect-ratio(3,2);
+			height: 0 !important;
+			width: 100%;
+		}
+
+		img {
+			@include absolute-pinned;
+			@include image-fill();
+			margin: 0 !important;
+			height: 100% !important;
+			width: 100% !important;
+		}
+	}
+}
+/* stylelint-enable */

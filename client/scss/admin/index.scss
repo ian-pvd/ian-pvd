@@ -2,3 +2,25 @@
  *
  * WordPress admin area style overrides
  */
+
+@import '../core/index';
+
+.fm-work_item {
+	@include vertical-rhythym(spacer(1), spacer(1), 1px dotted #E5E5E5);
+
+	.fm-wrapper {
+		input[type="text"],
+		select {
+			display: block;
+			width: 100%;
+		}
+
+		input[type="text"] {
+			max-width: 480px;
+		}
+
+		select {
+			max-width: 320px;
+		}
+	}
+}

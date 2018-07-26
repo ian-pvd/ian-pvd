@@ -8,9 +8,10 @@
 	flex-wrap: $wrap;
 
 	> * {
-		flex: 0 0 calc( ( 100% - ( ( #{$cols} - 1 ) * #{$gutter} ) ) / #{$cols} );
-		margin-right: #{$gutter};
+		flex: 0 0 auto;
 		margin-bottom: #{$gutter};
+		margin-right: #{$gutter};
+		width: calc( ( 100% - ( ( #{$cols} - 1 ) * #{$gutter} ) ) / #{$cols} );
 
 		&:nth-child(#{$cols}n) {
 			margin-right: 0;

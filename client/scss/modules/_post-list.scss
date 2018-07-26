@@ -1,0 +1,72 @@
+/* Post List Styles
+ *
+ * Styles and formatting for the post list component.
+ */
+
+.post-list__header {
+	font-size: rem(32);
+	letter-spacing: letter-spacing(10);
+	margin-bottom: spacer(2);
+	line-height: 1;
+}
+
+.post-list__description {
+	font-size: rem(14);
+	margin: spacer(-1) 0 spacer(1);
+}
+
+.post-list__feed--grid-thirds {
+	@include grid(3, spacer(3), wrap);
+}
+
+.post-list__feed--featured-posts {
+	@include grid(2, spacer(3), wrap);
+}
+
+.post-list__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-list__item-title {
+	@include item-subheader;
+	margin-bottom: spacer(0.75);
+}
+
+.post-list__item-excerpt {
+	color: $color-primary;
+	font-size: rem(12);
+	line-height: calc(7 / 6);
+
+	// If item has thumbnail, don't show excerpt
+	.post-list__item-thumbnail ~ & {
+		display: none;
+	}
+}
+
+.post-list__read-more {
+	display: block;
+	font-size: rem(14);
+	font-weight: 700;
+	letter-spacing: letter-spacing(100);
+	text-align: right;
+	text-transform: uppercase;
+
+	a {
+		@include link-hover;
+		color: inherit;
+	}
+}
+
+.post-thumbnail {
+	margin-bottom: spacer(1);
+}
+
+.post-thumbnail__frame {
+	@include aspect-ratio(16, 9);
+
+	img {
+		@include absolute-center();
+		@include image-fill();
+	}
+}

@@ -40,6 +40,7 @@
 
 // Aspect Ratio
 @mixin aspect-ratio($width: 3, $height: 2) {
+	display: block;
 	height: 0;
 	overflow: hidden;
 	padding-top: calc( ( #{$height} / #{$width} ) * 100%);
