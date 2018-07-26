@@ -7,6 +7,10 @@
  * @package ianpvd
  */
 
+$post_header_class = '';
+if ( pvd_get_the_post_header() ) {
+	$post_header_class = 'post-header--has-intro';
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,38 +26,29 @@
 
 		<div class="post-header__content wrapper wrapper--content">
 			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
-			<?php if ( 'post' === get_post_type() ) : ?>
-				<div class="post-meta">
-					<?php ianpvd_posted_on(); ?>
-				</div><!-- .post-meta -->
+
+			<div class="post-header__meta">
+				DATE
+				AUTHOR
+			</div>
+
+			<?php if ( pvd_get_the_post_header() ) : ?>
+			<div class="post-header__intro wp-content">
+				<?php pvd_the_post_header(); ?>
+			</div>
 			<?php endif; ?>
 		</div>
 
 	</header><!-- .post-header -->
 
 	<div class="post-content wp-content wrapper wrapper--content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ianpvd' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title();
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ianpvd' ),
-				'after'  => '</div>',
-			) );
-		?>
+		<?php the_content(); ?>
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
-		<?php ianpvd_entry_footer(); ?>
+
+		<?php pvd_post_list(); ?>
+
 	</footer><!-- .post-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
