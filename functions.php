@@ -164,16 +164,21 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ *	Load ian.pvd Custom Widgets & Widget Area Config
+ */
+require_once IANPVD_PATH . '/inc/widgets/index.php';
+
+/**
  * Load ian.pvd Feature Image functionality
  */
-require IANPVD_PATH . '/inc/featured-image/index.php';
+require_once IANPVD_PATH . '/inc/featured-image/index.php';
 
 /**
  * Load ian.pvd Post Header functionality
  */
-require IANPVD_PATH . '/inc/post-header/index.php';
+require_once IANPVD_PATH . '/inc/post-header/index.php';
 
 /**
  * Load ian.pvd Post Header functionality
  */
-require IANPVD_PATH . '/inc/post-list/index.php';
+require_once IANPVD_PATH . '/inc/post-list/index.php';
