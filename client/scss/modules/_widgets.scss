@@ -8,6 +8,10 @@
 	width: 100%;
 }
 
+.widget-area__wrapper {
+	@include wrapper;
+}
+
 .widget__title {
 	@include item-subheader;
 }

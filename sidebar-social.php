@@ -10,6 +10,6 @@ if ( ! is_active_sidebar( 'social-widgets' ) ) {
 }
 ?>
 
-<aside class="widget-area widget-area--social wrapper wrapper--page" role="complementary">
+<aside class="widget-area widget-area--social widget-area__wrapper" role="complementary">
 	<?php dynamic_sidebar( 'social-widgets' ); ?>
 </aside>

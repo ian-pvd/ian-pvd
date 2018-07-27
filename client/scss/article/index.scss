@@ -6,6 +6,9 @@
 // Load Theme Core
 @import '../index';
 
+// Load Module Styles
+@import '../modules/post-list';
+
 // Load Article Styles
 @import 'post-header';
 @import 'featured-image';

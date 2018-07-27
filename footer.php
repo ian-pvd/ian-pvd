@@ -14,7 +14,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper wrapper--page">
+		<div class="site-footer__wrapper">
 			<div class="site-info copyright">
 				<span class="copyright__author">
 					<a href="https://pvdind.com/"><?php echo get_bloginfo( 'name' ); ?></a>

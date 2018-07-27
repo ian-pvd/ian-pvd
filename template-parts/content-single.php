@@ -7,49 +7,48 @@
  * @package ianpvd
  */
 
+$post_header_class = '';
+if ( pvd_get_the_post_header() ) {
+	$post_header_class = 'post-header--has-intro';
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<header class="post-header">
+
 		<?php
-			the_title( '<h1 class="post-title">', '</h1>' );
-			if ( 'post' === get_post_type() ) : ?>
-			<div class="post-meta">
-				<?php ianpvd_posted_on(); ?>
-			</div><!-- .post-meta -->
-		<?php
-		endif; ?>
+			// Featured Image
+			if ( has_post_thumbnail() ) {
+				get_template_part( 'template-parts/featured-image' );
+			}
+		?>
+
+		<div class="post-header__content">
+			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
+
+			<div class="post-header__meta post-meta">
+				<span class="post-meta__date"><?php the_date(); ?></span>
+				<span class="post-meta__author"><?php pvd_the_post_category(); ?></span>
+			</div>
+
+			<?php if ( pvd_get_the_post_header() ) : ?>
+			<div class="post-header__intro wp-content">
+				<?php pvd_the_post_header(); ?>
+			</div>
+			<?php endif; ?>
+		</div>
+
 	</header><!-- .post-header -->
 
-	<?php
-		// Featured Image
-		pvd_the_featured_image( [ 'post-thumbnail' ] );
-	?>
-
-	<div class="post-content">
-		<?php
-			the_content( sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'ianpvd' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			) );
-
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'ianpvd' ),
-				'after'  => '</div>',
-			) );
-		?>
+	<div class="post-content wp-content">
+		<?php the_content(); ?>
 	</div><!-- .post-content -->
 
 	<footer class="post-footer">
-		<?php ianpvd_entry_footer(); ?>
+
+		<?php pvd_post_list(); ?>
+
 	</footer><!-- .post-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
