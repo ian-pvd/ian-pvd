@@ -174,7 +174,12 @@ function pvd_the_post_category() {
 	// TODO - Add primary category to posts
 	// TODO - Return primary cagegory
 	$post_category = get_the_category();
-	$post_category = $post_category[0];
 
-	echo '<a href="' . esc_url( get_category_link( $post_category->term_id ) ) . '" title="' . $post_category->name . '">' . $post_category->name . '</a>';
+	if ( is_array( $post_category ) && ! empty( $post_category ) ) {
+		$post_category = $post_category[0];
+
+		echo '<a href="' . esc_url( get_category_link( $post_category->term_id ) ) . '" title="' . $post_category->name . '">' . $post_category->name . '</a>';
+	} else {
+		echo '<span>' . esc_html_e( get_post_type() ) . '</span>';
+	}
 }
