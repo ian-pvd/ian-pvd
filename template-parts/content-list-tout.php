@@ -26,7 +26,12 @@
 
 	<?php if ( pvd_get_the_post_header() ) : ?>
 	<div class="post-list__item-excerpt wp-content">
-		<?php pvd_the_post_header(); ?>
+		<?php
+			pvd_the_post_header( [
+				'em' => [],
+				'strong' => [],
+			] );
+		?>
 	</div>
 	<?php endif; ?>
 </article>

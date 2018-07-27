@@ -23,6 +23,7 @@
 }
 
 .site-header__wrapper {
+	@include wrapper;
 	display: flex;
 }
 

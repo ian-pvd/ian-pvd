@@ -3,25 +3,30 @@
  * Styles for Single Post Header
  */
 
-.post-header--has-intro {
-	background-color: $color-secondary;
-	border-bottom: $border--heavy;
-	margin-bottom: spacer(3);
-}
-
 .post-header__content {
-	display: flex;
-	flex-direction: column;
+	@include wrapper( $width--content );
+	@include vertical-rhythym(spacer(1.5));
 	padding: spacer(3) 0;
 }
 
-.post-title {
-	font-size: rem(48);
-	font-weight: 700;
-	line-height: 1;
+.post-header__meta {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
 
-	.post-header--has-intro & {
-		margin-bottom: spacer(2);
+.post-meta {
+	span {
+		display: block;
+		font-size: rem(12);
+		text-transform: uppercase;
+	}
+
+	.post-meta__author {
+		a {
+			@include link-hover;
+			color: inherit;
+		}
 	}
 }
 
@@ -29,4 +34,11 @@
 	font-size: rem(20);
 	line-height: calc(4 / 3);
 	text-align: justify;
+}
+
+.post-title {
+	font-size: rem(48);
+	font-weight: 700;
+	line-height: 1;
+	margin-bottom: spacer(2);
 }
