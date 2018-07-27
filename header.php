@@ -25,7 +25,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ianpvd' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-header__wrapper wrapper wrapper--page">
+		<div class="site-header__wrapper">
 			<div class="site-branding">
 				<?php
 				ianpvd_site_title();

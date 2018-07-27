@@ -11,6 +11,10 @@
 	text-align: center;
 }
 
+.site-footer__wrapper {
+	@include wrapper( $width--site );
+}
+
 .site-info {
 	color: $color-highlight;
 	display: flex;

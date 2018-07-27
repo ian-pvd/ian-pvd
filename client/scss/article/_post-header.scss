@@ -4,8 +4,9 @@
  */
 
 .post-header__content {
-	padding: spacer(3) 0;
+	@include wrapper( $width--content );
 	@include vertical-rhythym(spacer(1.5));
+	padding: spacer(3) 0;
 }
 
 .post-header__meta {

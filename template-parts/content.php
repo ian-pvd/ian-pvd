@@ -33,7 +33,7 @@
 		}
 	?>
 
-	<div class="post-content wp-content wrapper wrapper--content">
+	<div class="post-content wp-content">
 		<?php
 			the_content( sprintf(
 				wp_kses(

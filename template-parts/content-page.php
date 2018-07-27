@@ -24,7 +24,7 @@ if ( pvd_get_the_post_header() ) {
 			}
 		?>
 
-		<div class="post-header__content post-header__content--page wrapper wrapper--content">
+		<div class="post-header__content post-header__content--page">
 			<?php the_title( '<h1 class="post-title post-title--page">', '</h1>' ); ?>
 			<?php if ( pvd_get_the_post_header() ) : ?>
 			<div class="post-header__intro wp-content">
@@ -35,7 +35,7 @@ if ( pvd_get_the_post_header() ) {
 
 	</header><!-- .post-header -->
 
-	<div class="post-content wp-content wrapper wrapper--content">
+	<div class="post-content wp-content">
 		<?php the_content(); ?>
 	</div><!-- .post-content -->
 

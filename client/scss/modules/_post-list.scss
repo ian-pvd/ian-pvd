@@ -2,6 +2,9 @@
  *
  * Styles and formatting for the post list component.
  */
+.post-list__wrapper {
+	@include wrapper;
+}
 
 .post-list__header {
 	font-size: rem(32);

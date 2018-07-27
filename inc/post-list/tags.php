@@ -30,7 +30,7 @@ function pvd_post_list( $args = [] ) {
 	}
 ?>
 
-	<div class="post-list post-list--<?php esc_attr_e( $context ); ?> wrapper wrapper--page">
+	<div class="post-list post-list--<?php esc_attr_e( $context ); ?> post-list__wrapper">
 
 		<?php if ( $list_title ) : ?>
 		<h2 class="post-list__header post-list__header--<?php esc_attr_e( $context ); ?>">

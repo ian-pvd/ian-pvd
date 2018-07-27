@@ -13,16 +13,16 @@
 		<?php the_post_thumbnail(); ?>
 		<?php if ( pvd_get_the_post_thumbnail_description() ): ?>
 		<div class="featured-image__credit">
-			<span class="wrapper wrapper--page">
+			<div class="featured-image__wrapper">
 				<?php pvd_the_post_thumbnail_description(); ?>
-			</span>
+			</div>
 		</div>
 		<?php endif; ?>
 	</div>
 
 	<?php if ( get_the_post_thumbnail_caption() ): ?>
 	<figcaption class="featured-image__caption">
-		<div class="wrapper wrapper--page">
+		<div class="featured-image__wrapper">
 			<?php the_post_thumbnail_caption(); ?>
 		</div>
 	</figcaption>
