@@ -8,6 +8,13 @@
  */
 
 function pvd_get_post_list_defaults() {
+
+	if ( in_the_loop() ) {
+		$exclude_posts = [ get_the_ID() ];
+	} else {
+		$exclude_posts = [];
+	}
+
 	$defaults = [
 		'context' => 'recent-posts',
 		'list_title' => 'Recent Posts',
@@ -17,6 +24,7 @@ function pvd_get_post_list_defaults() {
 		'query_vars' => [
 			'posts_per_page' => 3,
 			'post_category' => NULL,
+			'post__not_in' => $exclude_posts,
 			'zone' => NULL,
 		],
 		'read_more' => false,
