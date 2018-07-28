@@ -28,8 +28,8 @@ if ( pvd_get_the_post_header() ) {
 			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 
 			<div class="post-header__meta post-meta">
-				<span class="post-meta__date"><?php the_date(); ?></span>
-				<span class="post-meta__author"><?php pvd_the_post_category(); ?></span>
+				<span class="post-meta__value post-meta__date"><?php the_date(); ?></span>
+				<span class="post-meta__value post-meta__category"><?php pvd_the_post_category(); ?></span>
 			</div>
 
 			<?php if ( pvd_get_the_post_header() ) : ?>

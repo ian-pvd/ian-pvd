@@ -15,7 +15,11 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', 'single' );
+			if ( 'work' == get_post_type() ) {
+				get_template_part( 'template-parts/content', 'single-work' );
+			} else {
+				get_template_part( 'template-parts/content', 'single' );
+			}
 
 		endwhile; // End of the loop.
 		?>

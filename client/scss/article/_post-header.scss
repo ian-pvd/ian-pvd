@@ -16,18 +16,31 @@
 }
 
 .post-meta {
-	span {
-		display: block;
-		font-size: rem(12);
-		text-transform: uppercase;
+	a {
+		@include link-hover;
+		color: inherit;
 	}
+}
 
-	.post-meta__author {
-		a {
-			@include link-hover;
-			color: inherit;
-		}
+.post-meta__label,
+.post-meta__value,
+.post-meta__list-item {
+	display: block;
+	font-size: rem(12);
+	text-transform: uppercase;
+}
+
+.post-meta__label {
+	@include breakpoints(medium) {
+		@include screen-reader-text;
 	}
+}
+
+.post-meta__list {
+	line-height: calc(7 / 6);
+
+	// TODO, add this as a reusable "comma-list" mixin
+	@include comma-list;
 }
 
 .post-header__intro {
