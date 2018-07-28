@@ -44,11 +44,15 @@ if ( $work['screenshot'] ) {
 				</div>
 				<div class="post-meta__item post-meta__item--platform">
 					<span class="post-meta__label">Platform</span>
-					<span class="post-meta__value">WordPress</span>
+					<span class="post-meta__value">
+						<?php pvd_work_platform(); ?>
+					</span>
 				</div>
 				<div class="post-meta__item post-meta__item--date">
 					<span class="post-meta__label">Project Date</span>
-					<span class="post-meta__value">Jan 2016</span>
+					<span class="post-meta__value">
+						<?php pvd_work_project_date(); ?>
+					</span>
 				</div>
 				<div class="post-meta__item post-meta__item--keywords">
 					<span class="post-meta__label">Technology</span>

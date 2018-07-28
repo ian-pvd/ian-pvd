@@ -42,6 +42,42 @@ function pvd_work_client_list( $work = false ) {
 }
 
 /**
+ * Prints the project platform.
+ */
+function pvd_work_platform( $work = false ) {
+	// If no work data provided, get post meta.
+	if ( ! $work ) {
+		$work = get_post_meta( get_the_ID(), 'work_item', true );
+	}
+
+	// Output what we've got.
+	if ( $work['platform'] ) {
+		$category = get_term( $work['platform'] );
+		echo '<a href="' . esc_url( get_term_link($category->term_id ) ) . '">' . $category->name . '</a>';
+		// echo esc_html( $work['platform'] );
+	} else {
+		echo esc_html( 'N/A', 'ianpvd' );
+	}
+};
+
+/**
+ * Prints the project date.
+ */
+function pvd_work_project_date( $work = false ) {
+	// If no work data provided, get post meta.
+	if ( ! $work ) {
+		$work = get_post_meta( get_the_ID(), 'work_item', true );
+	}
+
+	// Output what we've got.
+	if ( $work['date'] ) {
+		echo date( 'F Y', $work['date'] );
+	} else {
+		echo esc_html( 'N/A', 'ianpvd' );
+	}
+};
+
+/**
  * Outputs an html list of clients for a Work post
  */
 function pvd_work_technology_list() {
