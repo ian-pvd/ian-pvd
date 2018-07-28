@@ -7,6 +7,7 @@
 
 // Get Work CPT fields meta
 $work = get_post_meta( get_the_ID(), 'work_item', true );
+var_dump($work);
 
 // Prefer screenshot, else default to post thumbnail
 $work_screenshot = false;
@@ -40,7 +41,7 @@ if ( $work['screenshot'] ) {
 			<div class="post-header__meta post-meta post-meta--work">
 				<div class="post-meta__item post-meta__item--client">
 					<span class="post-meta__label">Client</span>
-					<?php pvd_work_client_list( $work ); ?>
+					<?php pvd_work_client_list(); ?>
 				</div>
 				<div class="post-meta__item post-meta__item--platform">
 					<span class="post-meta__label">Platform</span>

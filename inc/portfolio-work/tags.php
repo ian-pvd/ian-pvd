@@ -20,8 +20,8 @@ function pvd_work_client_list( $work = false ) {
 	$client_array = [ [ 'client_name' => 'N/A' ] ];
 
 	// If clients, overwrite default value.
-	if ( ! empty( $work['clients'] ) ) {
-		$client_array = $work['clients'];
+	if ( ! empty( $work['info']['clients'] ) ) {
+		$client_array = $work['info']['clients'];
 	}
 
 	// Start list markup
@@ -51,10 +51,9 @@ function pvd_work_platform( $work = false ) {
 	}
 
 	// Output what we've got.
-	if ( $work['platform'] ) {
-		$category = get_term( $work['platform'] );
+	if ( $work['details']['platform'] ) {
+		$category = get_term( $work['details']['platform'] );
 		echo '<a href="' . esc_url( get_term_link($category->term_id ) ) . '">' . $category->name . '</a>';
-		// echo esc_html( $work['platform'] );
 	} else {
 		echo esc_html( 'N/A', 'ianpvd' );
 	}
@@ -70,8 +69,8 @@ function pvd_work_project_date( $work = false ) {
 	}
 
 	// Output what we've got.
-	if ( $work['date'] ) {
-		echo date( 'F Y', $work['date'] );
+	if ( $work['info']['date'] ) {
+		echo date( 'F Y', $work['info']['date'] );
 	} else {
 		echo esc_html( 'N/A', 'ianpvd' );
 	}

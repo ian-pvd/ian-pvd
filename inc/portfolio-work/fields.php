@@ -22,48 +22,58 @@ function pvd_fm_group_work_item() {
 				'mime_type' => 'image',
 				'preview_size' => 'medium',
 			] ),
-			// Client - Client name
-			'clients' => new Fieldmanager_Group( [
+			'info' => new Fieldmanager_Group( [
+				'label' => __( 'Project Info' ),
 				'children' => [
-					'client_name' => new Fieldmanager_TextField( [
-						'label' => __( 'Client', 'ianpvd' ),
+					// Project Date
+					'date' => new Fieldmanager_Datepicker( [
+						'label' => __( 'Project Date', 'ianpvd' ),
 					] ),
-					'client_link' => new Fieldmanager_Link( [
-						'label' => __( 'Client Link', 'ianpvd' ),
+					// Client - Client name
+					'clients' => new Fieldmanager_Group( [
+						'children' => [
+							'client_name' => new Fieldmanager_TextField( [
+								'label' => __( 'Client', 'ianpvd' ),
+							] ),
+							'client_link' => new Fieldmanager_Link( [
+								'label' => __( 'Client Link', 'ianpvd' ),
+							] ),
+						],
+						'add_more_label' => __( 'Add another client', 'ianpvd' ),
+						'extra_elements' => 1,
+						'limit' => 5,
 					] ),
 				],
-				'add_more_label' => __( 'Add another client', 'ianpvd' ),
-				'extra_elements' => 1,
-				'limit' => 5,
 			] ),
-			// Project Date
-			'date' => new Fieldmanager_Datepicker( [
-				'label' => __( 'Project Date', 'ianpvd' ),
-			] ),
-			// Work type – Option
-			'type' => new Fieldmanager_Select( [
-				'label' => __( 'Type' , 'ianpvd' ),
-				'first_empty' => true,
-				'options' => [
-					'website' => __( 'Website', 'ianpvd' ),
-					'codepen' => __( 'CodePen', 'ianpvd' ),
-					'repo' => __( 'GitHub Repo', 'ianpvd' ),
+			'details' =>  new Fieldmanager_Group( [
+				'label' => __( 'Project details', 'ianpvd' ),
+				'children' => [
+					// Work type – Option
+					'type' => new Fieldmanager_Select( [
+						'label' => __( 'Type' , 'ianpvd' ),
+						'first_empty' => true,
+						'options' => [
+							'website' => __( 'Website', 'ianpvd' ),
+							'codepen' => __( 'CodePen', 'ianpvd' ),
+							'repo' => __( 'GitHub Repo', 'ianpvd' ),
+						],
+						'description' => __( 'Project type will display in portfolio post lists.', 'ianpvd' ),
+					] ),
+					// Platform – Single tag
+					'platform' => new Fieldmanager_Select( [
+						'label' => __( 'Platform' , 'ianpvd' ),
+						'first_empty' => true,
+						'datasource' => new Fieldmanager_Datasource_Term( [
+							'taxonomy' => 'category',
+							'taxonomy_args' => [
+								'child_of' => $term_web_development->term_id,
+							],
+						] ),
+						'description' => __( 'Project platform will display on project detail pages.', 'ianpvd' ),
+					] ),
 				],
-				'description' => __( 'Project type will display in portfolio post lists.', 'ianpvd' ),
 			] ),
-			// Platform – Single tag
-			'platform' => new Fieldmanager_Select( [
-				'label' => __( 'Platform' , 'ianpvd' ),
-				'first_empty' => true,
-				'datasource' => new Fieldmanager_Datasource_Term( [
-					'taxonomy' => 'category',
-					'taxonomy_args' => [
-						'child_of' => $term_web_development->term_id,
-					],
-				] ),
-				'description' => __( 'Project platform will display on project detail pages.', 'ianpvd' ),
-			] ),
-			'link' => new Fieldmanager_Group( [
+			'links' => new Fieldmanager_Group( [
 				'label' => 'Project Links',
 				'children' => [
 					// External Permalink - Link directly to project

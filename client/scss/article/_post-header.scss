@@ -43,13 +43,13 @@
 	li {
 		display: inline-block;
 
-		&:not(::first-child)::before {
+		&:not(:first-child)::before {
 			content: '';
 			display: inline-block;
 			padding-left: calc(1rem / 3);
 		}
 
-		&:not(::last-child)::after {
+		&:not(:last-child)::after {
 			content: ',';
 			display: inline-block;
 		}
