@@ -38,30 +38,21 @@ if ( $work['screenshot'] ) {
 			?>
 
 			<div class="post-header__meta post-meta post-meta--work">
-				<div class="post-meta__client">
+				<div class="post-meta__item post-meta__item--client">
 					<span class="post-meta__label">Client</span>
-					<ul class="post-meta__list">
-						<li class="post-meta__list-item "><a href="">People.com</a></li>
-						<li class="post-meta__list-item ">PeopleTV</li>
-						<li class="post-meta__list-item ">Entertainment Weekly</li>
-					</ul>
+					<?php pvd_work_client_list( $work ); ?>
 				</div>
-				<div class="post-meta__platform">
+				<div class="post-meta__item post-meta__item--platform">
 					<span class="post-meta__label">Platform</span>
 					<span class="post-meta__value">WordPress</span>
 				</div>
-				<div class="post-meta__date">
+				<div class="post-meta__item post-meta__item--date">
 					<span class="post-meta__label">Project Date</span>
 					<span class="post-meta__value">Jan 2016</span>
 				</div>
-				<div class="post-meta__keywords">
+				<div class="post-meta__item post-meta__item--keywords">
 					<span class="post-meta__label">Technology</span>
-					<ul class="post-meta__list">
-						<li class="post-meta__list-item keywords--tech">SCSS</li>
-						<li class="post-meta__list-item keywords--tech">ES6</li>
-						<li class="post-meta__list-item keywords--tech">WordPress</li>
-						<li class="post-meta__list-item keywords--tech">jQuery</li>
-					</ul>
+					<?php pvd_work_technology_list(); ?>
 				</div>
 			</div>
 

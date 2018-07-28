@@ -53,6 +53,27 @@
 }
 
 .post-meta--work {
+	flex-wrap: wrap;
+
+	.post-meta__item {
+		width: 50%;
+
+		&:nth-child(-n+2) {
+			padding-bottom: spacer(1);
+			margin-bottom: spacer(1);
+			border-bottom: $border--light;
+		}
+
+		&:nth-child(odd) {
+			padding-right: spacer(3);
+		}
+
+		&:nth-child(even) {
+			padding-left: spacer(3);
+			text-align: right;
+		}
+	}
+
 	.post-meta__value,
 	.post-meta__list-item {
 		text-transform: none;
