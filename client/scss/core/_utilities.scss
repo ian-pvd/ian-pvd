@@ -108,6 +108,40 @@
 	box-shadow: 0 0 50vw rgba(0,0,0,0.333) inset;
 }
 
+// WP Screen Reader Text Mixin
+@mixin screen-reader-text {
+	/* Disable stylelint for !important browser overrides */
+	/* stylelint-disable declaration-no-important */
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+
+	&::focus {
+		background-color: #eee;
+		clip: auto !important;
+		clip-path: none;
+		color: $color-primary;
+		display: block;
+		font-size: 1rem;
+		height: auto;
+		left: spacer(0.5);
+		line-height: normal;
+		padding: spacer(1) spacer(1.5);
+		text-decoration: none;
+		top: spacer(0.5);
+		width: auto;
+		z-index: z-index(front);
+	}
+	/* stylelint-enable */
+}
+
 /* SCSS Dev Utilities
  *
  */

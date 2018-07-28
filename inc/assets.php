@@ -47,6 +47,11 @@ function ianpvd_enqueue_assets() {
 			wp_enqueue_script( 'ianpvd-page-js', get_template_directory_uri() . '/static/' . ianpvd_get_versioned_asset( 'page-js' ), array( 'ianpvd-common-js' ), '1.0' );
 			wp_enqueue_style( 'ianpvd-page-css', get_template_directory_uri() . '/static/' . ianpvd_get_versioned_asset( 'page-css' ), array(), '1.0' );
 		}
+
+		if ( 'work' == get_post_type() ) {
+			wp_enqueue_script( 'ianpvd-work-js', get_template_directory_uri() . '/static/' . ianpvd_get_versioned_asset( 'work-js' ), array( 'ianpvd-common-js' ), '1.0' );
+			wp_enqueue_style( 'ianpvd-work-css', get_template_directory_uri() . '/static/' . ianpvd_get_versioned_asset( 'work-css' ), array(), '1.0' );
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ianpvd_enqueue_assets' );

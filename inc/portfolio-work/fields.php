@@ -15,12 +15,30 @@ function pvd_fm_group_work_item() {
 	$fm = new Fieldmanager_Group( [
 		'name' => 'work_item',
 		'children' => [
+			// Screenshot - Featured Image for page, different than thumbnail
+			'screenshot' => new Fieldmanager_Media( [
+				'label' => 'Project screenshot',
+				'button_label' => __( 'Attach a screenshot', 'pvdind' ),
+				'mime_type' => 'image',
+				'preview_size' => 'medium',
+			] ),
 			// Client - Client name
-			'client' => new Fieldmanager_TextField( [
+			'clients' => new Fieldmanager_Group( [
+				'children' => [
+					'client_name' => new Fieldmanager_TextField( [
+						'label' => __( 'Client', 'ianpvd' ),
+					] ),
+					'client_link' => new Fieldmanager_Link( [
+						'label' => __( 'Client Link', 'ianpvd' ),
+					] ),
+				],
 				'add_more_label' => __( 'Add another client', 'ianpvd' ),
 				'extra_elements' => 1,
-				'label' => __( 'Client', 'ianpvd' ),
-				'limit' => 0,
+				'limit' => 5,
+			] ),
+			// Project Date
+			'date' => new Fieldmanager_Datepicker( [
+				'label' => __( 'Project Date', 'ianpvd' ),
 			] ),
 			// Work type – Option
 			'type' => new Fieldmanager_Select( [
@@ -31,6 +49,7 @@ function pvd_fm_group_work_item() {
 					'codepen' => __( 'CodePen', 'ianpvd' ),
 					'repo' => __( 'GitHub Repo', 'ianpvd' ),
 				],
+				'description' => __( 'Project type will display in portfolio post lists.', 'ianpvd' ),
 			] ),
 			// Platform – Single tag
 			'platform' => new Fieldmanager_Select( [
@@ -42,21 +61,28 @@ function pvd_fm_group_work_item() {
 						'child_of' => $term_web_development->term_id,
 					],
 				] ),
+				'description' => __( 'Project platform will display on project detail pages.', 'ianpvd' ),
 			] ),
-			// External Permalink - Link directly to project
-			'external_permalink' => new Fieldmanager_Checkbox( [
-				'label' => __( 'Link directly to project', 'ianpvd' ),
-			] ),
-			// Link(s) – Add one or more external links
-			'link' => new Fieldmanager_Link( [
-				'add_more_label' => __( 'Add another link', 'ianpvd' ),
-				'extra_elements' => 1,
-				'label' => __( 'Link', 'ianpvd' ),
-				'limit' => 0,
-			] ),
-			// Project Date
-			'date' => new Fieldmanager_Datepicker( [
-				'label' => __( 'Project Date', 'ianpvd' ),
+			'link' => new Fieldmanager_Group( [
+				'label' => 'Project Links',
+				'children' => [
+					// External Permalink - Link directly to project
+					'external_permalink' => new Fieldmanager_Checkbox( [
+						'label' => __( 'Link directly to project', 'ianpvd' ),
+						'description' => __( 'Project permalinks will bypass the Work single post template and open the project in a new window.', 'ianpvd' ),
+					] ),
+					// Project Link - Primary project link
+					'primary_link' => new Fieldmanager_Link( [
+						'label' => __( 'Primary Link', 'ianpvd' ),
+					] ),
+					// Example Link(s) – Add one or more external links
+					'example_links' => new Fieldmanager_Link( [
+						'add_more_label' => __( 'Add another link', 'ianpvd' ),
+						'extra_elements' => 1,
+						'label' => __( 'Example Links', 'ianpvd' ),
+						'limit' => 0,
+					] ),
+				],
 			] ),
 		],
 	] );

@@ -66,6 +66,7 @@ module.exports = function(env) {
         article: ['client/js/article/article.js'],
         home: ['client/js/home/home.js'],
         page: ['client/js/page/page.js'],
+        work: ['client/js/work/work.js'],
       },
 
       // Environment Info & Single Entry Point
