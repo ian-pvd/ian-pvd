@@ -51,7 +51,7 @@ function pvd_work_platform( $work = false ) {
 	}
 
 	// Output what we've got.
-	if ( $work['details']['platform'] ) {
+	if ( ! empty( $work['details']['platform'] ) ) {
 		$category = get_term( $work['details']['platform'] );
 		echo '<a href="' . esc_url( get_term_link($category->term_id ) ) . '">' . $category->name . '</a>';
 	} else {
@@ -69,7 +69,7 @@ function pvd_work_project_date( $work = false ) {
 	}
 
 	// Output what we've got.
-	if ( $work['info']['date'] ) {
+	if ( ! empty( $work['info']['date'] ) ) {
 		echo date( 'F Y', $work['info']['date'] );
 	} else {
 		echo esc_html( 'N/A', 'ianpvd' );

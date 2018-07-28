@@ -7,7 +7,6 @@
 
 // Get Work CPT fields meta
 $work = get_post_meta( get_the_ID(), 'work_item', true );
-var_dump($work);
 
 // Prefer screenshot, else default to post thumbnail
 $work_screenshot = false;
