@@ -142,6 +142,25 @@
 	/* stylelint-enable */
 }
 
+// Comma separated list styles for standard UL > LI, OL lists.
+@mixin comma-list() {
+	li,
+	ol {
+		display: inline-block;
+
+		&:not(:first-child)::before {
+			content: '';
+			display: inline-block;
+			padding-left: calc(1rem / 3);
+		}
+
+		&:not(:last-child)::after {
+			content: ',';
+			display: inline-block;
+		}
+	}
+}
+
 /* SCSS Dev Utilities
  *
  */
