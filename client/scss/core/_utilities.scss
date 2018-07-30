@@ -162,8 +162,8 @@
 }
 
 // Alternating Backgrounds for repeating content sections.
-@mixin repeating-sections( $start-from: first ) {
-	padding: spacer(3) 0;
+@mixin repeating-sections( $vertical-space: spacer(3), $start-from: first ) {
+	padding: $vertical-space 0;
 
 	@if ( $start-from == last) {
 		&:nth-last-child(2n+1) {
@@ -174,6 +174,31 @@
 		&:nth-child(2n+1) {
 			background: $color-secondary;
 		}
+	}
+}
+
+// Picture Frame
+@mixin picture-frame() {
+	border: 3px solid color(white);
+	box-shadow: 0 0.5rem 1rem -0.5rem rgba(0,0,0,0.5);
+	top: 0;
+	transition: top 0.2s, box-shadow 0.5s;
+
+	&:hover {
+		top: -2px;
+		box-shadow: 0 calc(0.5rem + 2px) calc(1rem + 2px) calc(-0.5rem + 2px) rgba(0,0,0,0.5);
+	}
+}
+
+// Flat Frame
+@mixin flat-frame() {
+	border: 1px solid hsla(0,0%,50%,0.25);
+	box-shadow: 0 0.25rem 1rem -0.5rem rgba(0,0,0,0.25);
+	transition: border 2s, box-shadow 1s;
+
+	&:hover {
+		border: 1px solid hsla(0,0%,25%,0.5);
+		box-shadow: 0 0.25rem 1rem -0.5rem rgba(0,0,0,0.5);
 	}
 }
 

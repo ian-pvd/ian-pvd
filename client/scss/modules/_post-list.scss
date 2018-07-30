@@ -48,6 +48,7 @@
 }
 
 .post-list__read-more {
+	padding-top: spacer(2);
 	display: block;
 	font-size: rem(14);
 	font-weight: 700;
@@ -67,6 +68,7 @@
 
 .post-thumbnail__frame {
 	@include aspect-ratio(16, 9);
+	@include flat-frame;
 
 	img {
 		@include absolute-center();

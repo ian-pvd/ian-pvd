@@ -4,5 +4,5 @@
  */
 
 .home-section {
-	@include repeating-sections();
+	@include repeating-sections(spacer(4),last);
 }

@@ -8,7 +8,7 @@
  */
 ?>
 
-<article class="post-list__item post-list__item--tout">
+<article class="post-list__item post-list__item--portfolio">
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<figure class="post-list__item-thumbnail post-thumbnail">

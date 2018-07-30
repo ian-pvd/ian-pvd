@@ -4,5 +4,5 @@
  */
 
 .page-section {
-	@include repeating-sections(last);
+	@include repeating-sections(3, last);
 }
