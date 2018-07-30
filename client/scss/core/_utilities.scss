@@ -161,6 +161,22 @@
 	}
 }
 
+// Alternating Backgrounds for repeating content sections.
+@mixin repeating-sections( $start-from: first ) {
+	padding: spacer(3) 0;
+
+	@if ( $start-from == last) {
+		&:nth-last-child(2n+1) {
+			background: $color-secondary;
+		}
+	}
+	@else {
+		&:nth-child(2n+1) {
+			background: $color-secondary;
+		}
+	}
+}
+
 /* SCSS Dev Utilities
  *
  */

@@ -36,6 +36,7 @@ get_header(); ?>
 					pvd_post_list( [
 						'context' => 'recent-work',
 						'list_title' => 'Recent Work',
+						'post_format' => 'portfolio',
 						'query_vars' => [
 							'post_type' => 'work',
 						],

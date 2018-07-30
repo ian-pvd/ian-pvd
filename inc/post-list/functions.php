@@ -22,7 +22,7 @@ function pvd_get_post_list_defaults() {
 		'list_description' => NULL,
 		'post_format' => 'tout',
 		'query_vars' => [
-			'posts_per_page' => 3,
+			'posts_per_page' => 6,
 			'post_category' => NULL,
 			'post__not_in' => $exclude_posts,
 			'zone' => NULL,

@@ -6,3 +6,10 @@
 	padding-top: 3rem;
 	margin-bottom: 6rem;
 }
+
+.post-list__item--tout {
+	.post-thumbnail__frame {
+		border: 3px solid color(white);
+		box-shadow: 0 0.5rem 1rem -0.5rem rgba(0,0,0,0.5);
+	}
+}
