@@ -73,10 +73,4 @@ if ( $work['screenshot'] ) {
 		<?php the_content(); ?>
 	</div><!-- .post-content -->
 
-	<footer class="post-footer">
-
-		<?php pvd_post_list(); ?>
-
-	</footer><!-- .post-footer -->
-
 </article><!-- #post-<?php the_ID(); ?> -->

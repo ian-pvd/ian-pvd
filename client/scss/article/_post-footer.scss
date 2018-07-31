@@ -4,6 +4,27 @@
  */
 
 .post-footer {
-	padding: spacer(3);
-	background-color: $color-secondary;
+	@include wrapper($width--content);
+}
+
+.author {
+	display: flex;
+}
+
+.author__image {
+	margin-right: spacer(3);
+	flex: 0 0 rem(128);
+}
+
+.author__about {
+	flex: 0 1 auto;
+}
+
+.author__name {
+	font-size: rem(18);
+	margin-bottom: spacer(0.5);
+}
+
+.author__description {
+	font-size: rem(14);
 }
