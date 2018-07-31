@@ -46,10 +46,10 @@ class IANPVD_Custom_Post_Type_Work {
 			'menu_position' => 5,
 			'menu_icon' => 'dashicons-portfolio',
 			'rewrite' => [
-				'slug' => 'work',
+				'slug' => 'portfolio',
 				'with_front' => false,
 			],
-			'has_archive' => true,
+			'has_archive' => 'portfolio',
 			'taxonomies' => [ 'post_tag' ],
 			'supports' => [ 'title', 'editor', 'thumbnail', 'revisions' ],
 		];

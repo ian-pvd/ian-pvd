@@ -1,0 +1,8 @@
+/* Page Content
+ *
+ * Styles for Single Page Content
+ */
+
+.page-section {
+	@include repeating-sections(spacer(3), last);
+}

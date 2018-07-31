@@ -4,9 +4,5 @@
  */
 
 .home-section {
-	padding: spacer(3) 0;
-
-	&:nth-child(even) {
-		background: $color-secondary;
-	}
+	@include repeating-sections(spacer(4),last);
 }

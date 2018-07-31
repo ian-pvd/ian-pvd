@@ -36,8 +36,13 @@ get_header(); ?>
 					pvd_post_list( [
 						'context' => 'recent-work',
 						'list_title' => 'Recent Work',
+						'post_format' => 'portfolio',
 						'query_vars' => [
+							'posts_per_page' => 6,
 							'post_type' => 'work',
+							'meta_query' => [
+								[ 'key' => '_thumbnail_id' ],
+							],
 						],
 						'read_more' => get_post_type_archive_link( 'work' ),
 						'read_more_text' => 'View More',

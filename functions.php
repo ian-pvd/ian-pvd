@@ -164,6 +164,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 /**
+ *	Load ian.pvd Custom Media Config
+ */
+require_once IANPVD_PATH . '/inc/media.php';
+
+/**
  *	Load ian.pvd Custom Widgets & Widget Area Config
  */
 require_once IANPVD_PATH . '/inc/widgets/index.php';

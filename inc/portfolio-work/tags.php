@@ -85,7 +85,6 @@ function pvd_work_technology_list() {
 
 	// Fallback object if no clients returned.
 	$tech_array = [ (object) [ 'name' => 'N/A' ] ];
-	// var_dump( $tech_array );
 
 	// If clients, overwrite default value.
 	if ( ! empty( $post_tags ) ) {
