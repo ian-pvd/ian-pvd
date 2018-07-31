@@ -18,23 +18,23 @@ get_header(); ?>
 				</header>
 				<?php endif; ?>
 
-				<?php if ( have_posts() ) : ?>
 				<div class="post-list__feed post-list__feed--blog post-list__feed--grid-thirds">
-					<?php
+				<?php
+				if ( have_posts() ) :
 
-						/* Start the Loop */
-						while ( have_posts() ) : the_post();
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
 
-							get_template_part( 'template-parts/content', 'list-tout' );
+						get_template_part( 'template-parts/content', 'list-tout' );
 
-						endwhile;
-					?>
+					endwhile;
 
-				<?php else : ?>
+				else :
 
-						<?php get_template_part( 'template-parts/content', 'none' ); ?>
+					get_template_part( 'template-parts/content', 'none' );
 
-				<?php endif; ?>
+				endif;
+				?>
 				</div>
 
 				<?php the_posts_navigation(); ?>
