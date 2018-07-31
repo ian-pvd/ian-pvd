@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="content-area__main site-main" role="main">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -25,6 +25,18 @@ get_header(); ?>
 		?>
 
 		</main><!-- #main -->
+
+		<section class="content-area__footer">
+
+			<?php
+				pvd_post_list( [
+					'query_vars' => [
+						'posts_per_page' => 3,
+					],
+				] );
+			?>
+
+		</section><!-- .content-recirc -->
 	</div><!-- #primary -->
 
 <?php
