@@ -25,6 +25,7 @@ get_header(); ?>
 			<?php
 				pvd_post_list( [
 					'post_format' => 'portfolio',
+					'read_more' => get_post_type_archive_link( 'post' ),
 				] );
 			?>
 		</section>

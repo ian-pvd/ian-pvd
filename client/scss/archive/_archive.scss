@@ -2,6 +2,17 @@
  * Archive Styles
  */
 
+.archive-header {
+	@include wrapper();
+	padding: 0 0 spacer(3) 0;
+}
+
+.archive-title {
+	font-size: rem(48);
+	font-weight: 700;
+	line-height: 1;
+}
+
 .post-list {
 	padding-top: 3rem;
 	margin-bottom: 6rem;
