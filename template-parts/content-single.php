@@ -47,7 +47,7 @@ if ( pvd_get_the_post_header() ) {
 
 	<footer class="post-footer">
 
-		<?php pvd_post_list(); ?>
+		<?php get_template_part( 'template-parts/author', 'about' ) ?>
 
 	</footer><!-- .post-footer -->
 
