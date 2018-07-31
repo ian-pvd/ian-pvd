@@ -36,14 +36,31 @@
 	margin-bottom: spacer(0.75);
 }
 
-.post-list__item-excerpt {
+.post-list__item-excerpt,
+.post-list__item-meta {
 	color: $color-primary;
 	font-size: rem(12);
 	line-height: calc(7 / 6);
+}
 
+.post-list__item-excerpt {
 	// If item has thumbnail, don't show excerpt
 	.post-list__item-thumbnail ~ & {
 		display: none;
+	}
+}
+
+.post-list__item-meta {
+	margin-top: spacer(-0.5);
+
+	.post-meta__value,
+	.post-meta__list {
+		display: inline;
+	}
+
+	.post-meta__value + .post-meta__list::before {
+		content: "- ";
+		display: inline;
 	}
 }
 
