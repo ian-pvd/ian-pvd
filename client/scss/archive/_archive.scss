@@ -17,3 +17,32 @@
 	padding-top: 3rem;
 	margin-bottom: 6rem;
 }
+
+.post-list__feed--archive {
+	+ .posts-navigation {
+		background: $color-secondary;
+		margin-top: spacer(3);
+		padding: spacer(0.5);
+
+		.nav-links {
+			display: flex;
+		}
+
+		.nav-next,
+		.nav-previous {
+			font-size: rem(14);
+			font-weight: 700;
+			letter-spacing: letter-spacing(100);
+			text-transform: uppercase;
+
+			a {
+				@include link-hover;
+				color: inherit;
+			}
+		}
+
+		.nav-next {
+			margin-left: auto;
+		}
+	}
+}
