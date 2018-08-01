@@ -12,10 +12,12 @@
 <div class="no-results not-found">
 
 	<header class="page-header">
-		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'ianpvd' ); ?></h1>
+		<div class="page-header__content">
+			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'ianpvd' ); ?></h1>
+		</div>
 	</header><!-- .page-header -->
 
-	<div class="page-content">
+	<div class="page-content wp-content">
 		<?php
 		if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 

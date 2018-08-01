@@ -3,7 +3,8 @@
  * Styles for Single Post Header
  */
 
-.post-header__content {
+.post-header__content,
+.page-header__content {
 	@include wrapper( $width--content );
 	@include vertical-rhythym(spacer(1.5));
 	padding: spacer(3) 0;
@@ -49,7 +50,8 @@
 	text-align: justify;
 }
 
-.post-title {
+.post-title,
+.page-title {
 	font-size: rem(48);
 	font-weight: 700;
 	line-height: 1;

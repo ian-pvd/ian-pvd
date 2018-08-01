@@ -44,6 +44,7 @@ $height--site-header: spacer(5);
 $margin-bottom--site-header: 0;
 
 // Reusable Borders
+$border--solid: 1px solid $color-secondary;
 $border--light: 1px solid fade-out($color-secondary, 0.25);
 $border--dotted-light: 1px dotted fade-out(color(white), 0.75);
 $border--solid-dark: 3px solid $color-text;
