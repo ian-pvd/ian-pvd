@@ -3,7 +3,8 @@
  * Styles for Post Footer
  */
 
-.post-footer {
+.post-footer,
+.page-footer {
 	@include wrapper($width--content);
 }
 
