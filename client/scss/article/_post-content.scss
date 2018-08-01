@@ -3,7 +3,8 @@
  * Styles for Post Content
  */
 
-.post-content {
+.post-content,
+.page-content {
 	@include wrapper( $width--content );
 	margin-bottom: spacer(6);
 }

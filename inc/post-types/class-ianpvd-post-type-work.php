@@ -19,7 +19,7 @@ class IANPVD_Custom_Post_Type_Work {
 	 */
 	public function create_post_type() {
 		$labels = [
-			'name'               => __( 'Work', 'ianpvd' ),
+			'name'               => __( 'Portfolio', 'ianpvd' ),
 			'singular_name'      => __( 'Portfolio Item', 'ianpvd' ),
 			'add_new'            => __( 'Add New Portfolio Item', 'ianpvd' ),
 			'add_new_item'       => __( 'Add Work Item', 'ianpvd' ),

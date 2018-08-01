@@ -6,7 +6,7 @@
 	align-items: center;
 	background-color: $color-primary;
 	color: $color-secondary;
-	flex: 1 0 auto;
+	flex: 0 0 $height--site-header;
 	margin-bottom: $margin-bottom--site-header;
 	padding: spacer(1.5) 0;
 	width: 100%;

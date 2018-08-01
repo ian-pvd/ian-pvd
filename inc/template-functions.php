@@ -25,3 +25,19 @@ function ianpvd_body_classes( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class', 'ianpvd_body_classes' );
+
+/**
+ * Removes taxonomy type prefix from `the_archive_title()`
+ *
+ */
+add_filter( 'get_the_archive_title', function( $title ) {
+	if ( is_category() ) {
+		$title = single_cat_title( '', false);
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	}
+
+	return $title;
+} );

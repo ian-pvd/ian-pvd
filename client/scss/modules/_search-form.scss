@@ -1,0 +1,43 @@
+/* Search Form Styles
+ *
+ * Styles for header, sidebar and in-page search forms.
+ */
+
+.search-form {
+	position: relative;
+	display: flex;
+}
+
+.search-label {
+	max-width: 0;
+}
+
+.search-input {
+	background: lighten($color-background, 50%);
+	border: $border--solid;
+	box-shadow: inset rem(2) rem(2) rem(4) fade-out(color(grey-very-light), 0.75);
+	font: $font-body;
+	margin: 0;
+	padding: spacer(0.5);
+	width: 100%;
+
+	&::-webkit-search-cancel-button {
+		display: none;
+	}
+}
+
+.search-submit {
+	background: transparent url('../../img/icon-search.svg') center no-repeat;
+	background-size: auto spacer(1.5);
+	border: none;
+	filter: brightness(2);
+	height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: spacer(3);
+
+	&:hover {
+		margin-right: spacer(1.5);
+	}
+}
