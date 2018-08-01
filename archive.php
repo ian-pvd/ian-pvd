@@ -20,9 +20,8 @@ get_header(); ?>
 				<div class="post-list__feed post-list__feed--archive post-list__feed--grid-thirds">
 
 				<?php
-				if ( have_posts() ) : ?>
+				if ( have_posts() ) :
 
-					<?php
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 
@@ -36,6 +35,7 @@ get_header(); ?>
 
 				endif; ?>
 				</div>
+
 				<?php the_posts_navigation(); ?>
 			</div>
 

@@ -11,37 +11,49 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
+			<div class="post-list post-list--search post-list__wrapper">
 
-		<?php
-		if ( have_posts() ) : ?>
+				<header class="archive-header archive-header--search">
+					<h1 class="archive-title archive-title--search"><?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Results for: %s', 'ianpvd' ), '<span>' . get_search_query() . '</span>' );
+					?></h1>
+					<?php get_search_form(); ?>
+				</header><!-- .archive-header -->
 
-			<header class="page-header">
-				<h1 class="page-title"><?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'ianpvd' ), '<span>' . get_search_query() . '</span>' );
-				?></h1>
-			</header><!-- .page-header -->
+				<div class="post-list__feed post-list__feed--search post-list__feed--grid-thirds">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+				<?php
+				if ( have_posts() ) :
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+					/* Start the Loop */
+					while ( have_posts() ) : the_post();
 
-			endwhile;
+						get_template_part( 'template-parts/content', 'list-tout' );
 
-			the_posts_navigation();
+					endwhile;
 
-		else :
+				else :
 
-			get_template_part( 'template-parts/content', 'none' );
+					get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+				endif; ?>
+				</div>
+
+				<?php the_posts_navigation(); ?>
+			</div>
+
+			<section class="content-area__footer">
+
+				<?php
+					pvd_post_list( [
+						'query_vars' => [
+							'posts_per_page' => 3,
+						],
+					] );
+				?>
+
+			</section><!-- .content-recirc -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
