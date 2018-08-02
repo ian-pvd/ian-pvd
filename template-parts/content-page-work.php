@@ -33,6 +33,15 @@ if ( pvd_get_the_post_header() ) {
 			<?php endif; ?>
 		</div>
 
+		<?php
+		if ( has_nav_menu( 'work-submenu' ) ) {
+			wp_nav_menu( array(
+				'theme_location' => 'work-submenu',
+				'menu_id'        => 'work-submenu',
+			) );
+		}
+		?>
+
 	</header><!-- .post-header -->
 
 	<?php if ( get_the_content() ) : ?>
