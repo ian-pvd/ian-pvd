@@ -24,6 +24,8 @@ get_header(); ?>
 		<section class="page-section page-section--blog">
 			<?php
 				pvd_post_list( [
+					'list_format' => 'column',
+					'post_format' => 'text',
 					'read_more' => get_post_type_archive_link( 'post' ),
 					'query_vars' => [
 						'posts_per_page' => 6,

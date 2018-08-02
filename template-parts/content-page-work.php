@@ -15,7 +15,7 @@ if ( pvd_get_the_post_header() ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="post-header post-header--page <?php echo esc_attr( $post_header_class ) ?>">
+	<header class="post-header post-header--page post-header--page-work <?php echo esc_attr( $post_header_class ) ?>">
 
 		<?php
 			// Featured Image

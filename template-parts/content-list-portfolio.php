@@ -24,7 +24,7 @@
 		</a>
 	</h2>
 
-	<div class="post-list__item-meta">
+	<div class="post-list__item-meta post-list__item-meta--portfolio">
 		<span class="post-meta__value">
 			<?php pvd_work_platform(); ?>
 		</span>

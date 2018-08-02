@@ -27,6 +27,11 @@
 	@include grid(2, spacer(3), wrap);
 }
 
+.post-list__feed--column {
+	@include vertical-rhythym( spacer(1.5), spacer(1.5), 1px dotted $color-secondary );
+	margin-bottom: spacer(1.5);
+}
+
 .post-list__item {
 	display: flex;
 	flex-direction: column;
@@ -35,6 +40,10 @@
 .post-list__item-title {
 	@include item-subheader;
 	margin-bottom: spacer(0.75);
+}
+
+.post-list__item-title--text {
+	margin-bottom: spacer(0.5);
 }
 
 .post-list__item-excerpt,
@@ -49,9 +58,13 @@
 	.post-list__item-thumbnail ~ & {
 		display: none;
 	}
+
+	.post-list__item-meta--text + & {
+		margin-top: spacer(0.5);
+	}
 }
 
-.post-list__item-meta {
+.post-list__item-meta-portfolio {
 	margin-top: spacer(-0.5);
 
 	.post-meta__value,
@@ -62,6 +75,16 @@
 	.post-meta__value + .post-meta__list::before {
 		content: "- ";
 		display: inline;
+	}
+}
+
+.post-list__item-meta--text {
+	display: flex;
+
+	.post-meta__category::before {
+		content: '–';
+		display: inline-block;
+		padding: 0 spacer(0.3);
 	}
 }
 

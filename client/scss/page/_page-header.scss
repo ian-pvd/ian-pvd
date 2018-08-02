@@ -7,6 +7,10 @@
 	background-color: $color-secondary;
 	border-bottom: $border--heavy;
 	margin-bottom: spacer(3);
+
+	&.post-header--page-work {
+		margin-bottom: 0;
+	}
 }
 
 .post-header__content--page {
