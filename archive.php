@@ -25,7 +25,11 @@ get_header(); ?>
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content', 'list-portfolio' );
+						if ( is_post_type_archive( 'work' ) ) {
+							get_template_part( 'template-parts/content', 'list-portfolio' );
+						} else {
+							get_template_part( 'template-parts/content', 'list-tout' );
+						}
 
 					endwhile;
 
