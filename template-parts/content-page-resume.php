@@ -35,7 +35,7 @@ if ( pvd_get_the_post_header() ) {
 
 	</header><!-- .post-header -->
 
-	<div class="post-content wp-content">
+	<div class="post-content post-content--resume wp-content">
 		<?php the_content(); ?>
 	</div><!-- .post-content -->
 
