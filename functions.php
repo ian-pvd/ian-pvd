@@ -47,7 +47,9 @@ function ianpvd_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'ianpvd' ),
+		'primary-nav' => esc_html__( 'Primary', 'ianpvd' ),
+		'social-links' => esc_html__( 'Social Links', 'ian' ),
+		'work-submenu' => esc_html__( 'Work Submenu', 'ian' ),
 	) );
 
 	/*

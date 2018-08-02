@@ -6,6 +6,9 @@
  *
  * @package ianpvd
  */
+// Get Web Development term id for select dropdown
+$category_id = get_term_by('slug', 'web-development', 'category');
+$category_id = $category_id->term_id;
 
 get_header(); ?>
 
@@ -24,8 +27,13 @@ get_header(); ?>
 		<section class="page-section page-section--blog">
 			<?php
 				pvd_post_list( [
-					'post_format' => 'portfolio',
-					'read_more' => get_post_type_archive_link( 'post' ),
+					'list_format' => 'column',
+					'post_format' => 'text',
+					'query_vars' => [
+						'posts_per_page' => 6,
+						'cat' => $category_id,
+					],
+					'read_more' => get_category_link( $category_id ),
 				] );
 			?>
 		</section>

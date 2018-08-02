@@ -63,6 +63,7 @@ function pvd_fm_group_work_item() {
 					'platform' => new Fieldmanager_Select( [
 						'label' => __( 'Platform' , 'ianpvd' ),
 						'first_empty' => true,
+						'limit' => 1,
 						'datasource' => new Fieldmanager_Datasource_Term( [
 							'taxonomy' => 'category',
 							'taxonomy_args' => [
@@ -70,6 +71,8 @@ function pvd_fm_group_work_item() {
 							],
 						] ),
 						'description' => __( 'Project platform will display on project detail pages.', 'ianpvd' ),
+						'validation_rules' => 'required',
+						'validation_messages' => __( 'Please select a platform', 'ianpvd' ),
 					] ),
 				],
 			] ),
@@ -80,10 +83,15 @@ function pvd_fm_group_work_item() {
 					'external_permalink' => new Fieldmanager_Checkbox( [
 						'label' => __( 'Link directly to project', 'ianpvd' ),
 						'description' => __( 'Project permalinks will bypass the Work single post template and open the project in a new window.', 'ianpvd' ),
+						'attributes' => [
+							'checked' => true,
+						],
 					] ),
 					// Project Link - Primary project link
 					'primary_link' => new Fieldmanager_Link( [
 						'label' => __( 'Primary Link', 'ianpvd' ),
+						'validation_rules' => 'required',
+						'validation_messages' => __( 'Please enter a primary link', 'blkmsk' ),
 					] ),
 					// Example Link(s) – Add one or more external links
 					'example_links' => new Fieldmanager_Link( [
