@@ -13,7 +13,7 @@
 	<?php if ( has_post_thumbnail() ) : ?>
 	<figure class="post-list__item-thumbnail post-thumbnail">
 		<a href="<?php the_permalink(); ?>" class="post-thumbnail__frame">
-			<?php the_post_thumbnail(); ?>
+			<?php the_post_thumbnail( 'tout' ); ?>
 		</a>
 	</figure>
 	<?php endif; ?>

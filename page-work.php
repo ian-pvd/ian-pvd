@@ -24,8 +24,11 @@ get_header(); ?>
 		<section class="page-section page-section--blog">
 			<?php
 				pvd_post_list( [
-					'post_format' => 'portfolio',
 					'read_more' => get_post_type_archive_link( 'post' ),
+					'query_vars' => [
+						'posts_per_page' => 6,
+						'category_name' => 'web-development',
+					],
 				] );
 			?>
 		</section>
