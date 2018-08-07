@@ -14,12 +14,12 @@ get_header(); ?>
 
 			<section class="error-404 not-found">
 				<header class="page-header">
-					<div class="page-header__content">
+					<div class="page-header__content page-header__content--error-404">
 						<h1 class="page-title"><?php esc_html_e( '404: Not Found', 'ianpvd' ); ?></h1>
 					</div>
 				</header><!-- .page-header -->
 
-				<div class="page-content wp-content">
+				<div class="page-content page-content--error-404 wp-content">
 					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'ianpvd' ); ?></p>
 
 					<?php
