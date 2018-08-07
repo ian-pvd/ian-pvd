@@ -6,3 +6,20 @@
 .home-section {
 	@include repeating-sections(spacer(4),last);
 }
+
+.post-header__content {
+	padding-bottom: spacer(1.5);
+}
+
+.post-content {
+	p:first-of-type {
+		font-size: rem(18);
+	}
+
+	img {
+		@include flat-frame;
+		margin: spacer(-4) spacer(-0.5) spacer(1) spacer(1);
+		max-width: rem(240);
+		transform: rotate(3deg) scaleX(-1);
+	}
+}

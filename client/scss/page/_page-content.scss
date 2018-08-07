@@ -6,3 +6,9 @@
 .page-section {
 	@include repeating-sections(spacer(3), last);
 }
+
+.post-header--page-work {
+	+ .post-content {
+		display: none;
+	}
+}
