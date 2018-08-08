@@ -109,8 +109,6 @@ function ianpvd_widgets_init() {
 }
 add_action( 'widgets_init', 'ianpvd_widgets_init' );
 
-// WordPress Underscores theme JS
-require_once IANPVD_PATH . '/inc/wp-assets.php';
 // Generated asset versioning function.
 // NOTE: This is a auto-generated file, alter it manually at your own risk.
 require_once IANPVD_PATH . '/inc/versioned-assets.php';

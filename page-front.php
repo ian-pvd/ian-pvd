@@ -32,7 +32,6 @@ get_header(); ?>
 
 			<section class="home-section home-section--portfolio">
 				<?php
-					// TODO – WORK (ZONE, CPT), 3 CODEPEN, GITHUB OR PROJECT ITEMS
 					pvd_post_list( [
 						'context' => 'recent-work',
 						'list_title' => 'Featured Work',

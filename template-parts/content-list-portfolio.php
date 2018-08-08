@@ -12,8 +12,8 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<figure class="post-list__item-thumbnail post-thumbnail">
-		<a href="<?php echo esc_url( pvd_work_permalink() ); ?>" target="_blank" class="post-thumbnail__frame">
-			<?php the_post_thumbnail( 'portfolio' ); ?>
+		<a href="<?php echo esc_url( pvd_work_permalink() ); ?>" target="_blank" class="post-thumbnail__frame post-thumbnail__frame--portfolio">
+			<?php the_post_thumbnail( 'portfolio-thumbnail' ); ?>
 		</a>
 	</figure>
 	<?php endif; ?>
