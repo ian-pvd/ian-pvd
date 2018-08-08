@@ -1,6 +1,8 @@
 <?php
 /**
- * Template part for displaying resume page content
+ * Template part for displaying page content in page.php
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package ianpvd
  */
@@ -33,8 +35,16 @@ if ( pvd_get_the_post_header() ) {
 
 	</header><!-- .post-header -->
 
-	<div class="post-content post-content--resume wp-content">
+	<div class="post-content wp-content">
 		<?php the_content(); ?>
+		<div class="social-block">
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'social-links',
+			'menu_id'        => 'social-links',
+		) );
+		?>
+		</div>
 	</div><!-- .post-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
