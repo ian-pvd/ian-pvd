@@ -44,6 +44,10 @@
 		background: $color-background;
 		color: $color-primary;
 
+		.fts-twitter-backg-image {
+			max-height: rem(86);
+		}
+
 		.tweeter-info {
 			border-bottom: none;
 			padding: spacer(1) 0;
