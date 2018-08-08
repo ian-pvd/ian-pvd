@@ -116,3 +116,9 @@
 		@include image-fill();
 	}
 }
+
+.post-thumbnail__frame--portfolio {
+	img {
+		object-position: 50% 0;
+	}
+}
