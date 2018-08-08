@@ -1,0 +1,28 @@
+/* Social Icon Styles
+ *
+ *
+ */
+
+// Social Links Menu Widget
+[class^="menu-social-links"] {
+	a {
+		@include link-hover;
+		color: inherit;
+		display: flex;
+		font-size: rem(14);
+		align-items: center;
+
+		&::before {
+			@include pseudo-block;
+			background: url('../../img/icon-star.svg') center no-repeat;
+			margin-right: spacer(0.5);
+			background-size: 100% auto;
+		}
+
+		@each $link in twitter, github, codepen, wordpress, linkedin {
+			&[href*="#{$link}"]::before {
+				background-image: url('../../img/icon-#{$link}.svg');
+			}
+		}
+	}
+}

@@ -1,8 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
+ * Template part for displaying resume page content
  *
  * @package ianpvd
  */
@@ -35,7 +33,7 @@ if ( pvd_get_the_post_header() ) {
 
 	</header><!-- .post-header -->
 
-	<div class="post-content wp-content">
+	<div class="post-content post-content--resume wp-content">
 		<?php the_content(); ?>
 	</div><!-- .post-content -->
 

@@ -20,17 +20,28 @@ get_header(); ?>
 			<?php
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', 'page' );
-
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
+				if ( is_page( 'about' ) ) {
+					get_template_part( 'template-parts/content', 'page-about' );
+				} else {
+					get_template_part( 'template-parts/content', 'page' );
+				}
 
 			endwhile; // End of the loop.
 			?>
 
 		</main><!-- #main -->
+
+		<section class="content-area__footer">
+
+			<?php
+				pvd_post_list( [
+					'query_vars' => [
+						'posts_per_page' => 3,
+					],
+				] );
+			?>
+
+		</section><!-- .content-recirc -->
 	</div><!-- #primary -->
 
 <?php

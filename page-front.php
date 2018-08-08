@@ -35,7 +35,7 @@ get_header(); ?>
 					// TODO – WORK (ZONE, CPT), 3 CODEPEN, GITHUB OR PROJECT ITEMS
 					pvd_post_list( [
 						'context' => 'recent-work',
-						'list_title' => 'Recent Work',
+						'list_title' => 'Featured Work',
 						'post_format' => 'portfolio',
 						'query_vars' => [
 							'posts_per_page' => 6,

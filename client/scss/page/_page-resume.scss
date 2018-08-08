@@ -1,0 +1,49 @@
+/* Resume Styles
+ *
+ * Custom styles overrides for Resume Page
+ */
+
+.post-content--resume {
+	h2,
+	h3,
+	p,
+	ul {
+		margin-bottom: 0;
+	}
+
+	h2,
+	h3 {
+		font-family: font-family(display);
+	}
+
+	h2 {
+		padding-bottom: spacer(0.25);
+		margin-bottom: 0;
+		font-size: rem(24);
+	}
+
+	h3 {
+		text-transform: none;
+
+		+ p {
+			font-size: rem(12);
+			text-transform: uppercase;
+		}
+	}
+
+	ul {
+		list-style: none;
+		font-size: rem(14);
+
+		li {
+			position: relative;
+
+			&::before {
+				content: '-';
+				display: inline-block;
+				margin-left: spacer(-1.5);
+				margin-right: spacer(0.75);
+			}
+		}
+	}
+}

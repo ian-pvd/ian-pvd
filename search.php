@@ -21,24 +21,31 @@ get_header(); ?>
 					<?php get_search_form(); ?>
 				</header><!-- .archive-header -->
 
-				<div class="post-list__feed post-list__feed--search post-list__feed--grid-thirds">
+				<?php if ( have_posts() ) : ?>
 
-				<?php
-				if ( have_posts() ) :
-
+					<div class="post-list__feed post-list__feed--search post-list__feed--grid-thirds">
+					<?php
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();
 
-						get_template_part( 'template-parts/content', 'list-tout' );
+						if ( 'work' == get_post_type() ) {
+							get_template_part( 'template-parts/content', 'list-portfolio' );
+						} else {
+							get_template_part( 'template-parts/content', 'list-tout' );
+						}
 
 					endwhile;
+					?>
 
+					</div>
+
+				<?php
 				else :
 
 					get_template_part( 'template-parts/content', 'none' );
 
-				endif; ?>
-				</div>
+				endif;
+				?>
 
 				<?php the_posts_navigation(); ?>
 			</div>

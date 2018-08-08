@@ -37,6 +37,14 @@ if ( pvd_get_the_post_header() ) {
 
 	<div class="post-content wp-content">
 		<?php the_content(); ?>
+		<div class="social-block">
+		<?php
+		wp_nav_menu( array(
+			'theme_location' => 'social-links',
+			'menu_id'        => 'social-links',
+		) );
+		?>
+		</div>
 	</div><!-- .post-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

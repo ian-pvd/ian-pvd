@@ -56,6 +56,17 @@ h4 {
 a {
 	@include link-hover;
 	color: $color-highlight;
+	font-weight: 700;
+	letter-spacing: letter-spacing(10);
+}
+
+// Media
+img {
+	margin-top: -1rem;
+
+	&.alignright {
+		float: right;
+	}
 }
 
 // Body copy

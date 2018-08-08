@@ -51,7 +51,7 @@ class IANPVD_Custom_Post_Type_Work {
 			],
 			'has_archive' => 'portfolio',
 			'taxonomies' => [ 'post_tag' ],
-			'supports' => [ 'title', 'editor', 'thumbnail', 'revisions' ],
+			'supports' => [ 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes' ],
 		];
 
 		register_post_type( 'work', $args );
@@ -59,3 +59,22 @@ class IANPVD_Custom_Post_Type_Work {
 }
 
 $custom_post_type_work = new IANPVD_Custom_Post_Type_Work();
+
+/**
+ * Set default ordering for Work CPTs to menu_order, ASC
+ */
+function pvd_work_post_order( $query ) {
+    $post_type = $query->get('post_type');
+
+    if ( $post_type == 'work' ) {
+        // Set orderby to menu_order
+        if ( $query->get( 'orderby' ) == '' ) {
+            $query->set( 'orderby', 'menu_order' );
+        }
+        // Set order to ascending
+        if ( $query->get( 'order' ) == '' ) {
+            $query->set( 'order', 'ASC' );
+        }
+    }
+}
+add_action( 'pre_get_posts', 'pvd_work_post_order' );
