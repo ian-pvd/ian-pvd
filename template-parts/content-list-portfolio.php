@@ -12,7 +12,7 @@
 
 	<?php if ( has_post_thumbnail() ) : ?>
 	<figure class="post-list__item-thumbnail post-thumbnail">
-		<a href="<?php echo esc_url( pvd_work_permalink() ); ?>" target="_blank" class="post-thumbnail__frame post-thumbnail__frame--portfolio">
+		<a href="<?php echo esc_url( pvd_work_permalink() ); ?>" title="<?php echo esc_attr( get_the_title() ); ?>" target="_blank" class="post-thumbnail__frame post-thumbnail__frame--portfolio">
 			<?php the_post_thumbnail( 'portfolio-thumbnail' ); ?>
 		</a>
 	</figure>
