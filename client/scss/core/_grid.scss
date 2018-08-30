@@ -10,15 +10,25 @@
 	> * {
 		flex: 0 0 auto;
 		margin-bottom: #{$gutter};
-		margin-right: #{$gutter};
-		width: calc( ( 100% - ( ( #{$cols} - 1 ) * #{$gutter} ) ) / #{$cols} );
+		width: 100%;
 
-		&:nth-child(#{$cols}n) {
-			margin-right: 0;
-		}
-
-		&:nth-last-child(-n+#{$cols}) {
+		&:last-child {
 			margin-bottom: 0;
+		}
+	}
+
+	@include breakpoints(small) {
+		> * {
+			margin-right: #{$gutter};
+			width: calc( ( 100% - ( ( #{$cols} - 1 ) * #{$gutter} ) ) / #{$cols} );
+
+			&:nth-child(#{$cols}n) {
+				margin-right: 0;
+			}
+
+			&:nth-last-child(-n+#{$cols}) {
+				margin-bottom: 0;
+			}
 		}
 	}
 }
