@@ -52,12 +52,4 @@ td, th {
   padding: 0;
   text-align: left;
 }
-
-/* Screen reader text */
-.sr-only,
-.screen-reader-text {
-  position: absolute !important;
-  top: -9999px !important;
-  left: -9999px !important;
-}
 /* stylelint-enable */
