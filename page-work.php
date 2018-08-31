@@ -23,7 +23,7 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-
+		<?php if ( wp_count_posts()->publish > 6 ) : ?>
 		<section class="page-section page-section--blog">
 			<?php
 				pvd_post_list( [
@@ -37,6 +37,7 @@ get_header(); ?>
 				] );
 			?>
 		</section>
+		<?php endif; ?>
 
 		<section class="page-section page-section--portfolio">
 			<?php
