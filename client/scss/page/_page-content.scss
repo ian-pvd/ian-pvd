@@ -4,7 +4,7 @@
  */
 
 .page-section {
-	@include repeating-sections(spacer(3), last);
+	@include repeating-sections(spacer(3), first);
 }
 
 .post-header--page-work {
