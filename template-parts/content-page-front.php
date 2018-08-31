@@ -22,7 +22,6 @@ if ( pvd_get_the_post_header() ) {
 		?>
 
 		<div class="post-header__content">
-			<?php the_title( '<h1 class="post-title">', '</h1>' ); ?>
 			<?php if ( pvd_get_the_post_header() ) : ?>
 			<div class="post-header__intro">
 				<?php pvd_the_post_header(); ?>
