@@ -21,6 +21,7 @@ get_header(); ?>
 			endwhile; // End of the loop.
 			?>
 
+			<?php if ( wp_count_posts()->publish > 6 ) : ?>
 			<section class="home-section home-section--recent-posts">
 				<?php
 					// TODO – v2, Replace with featured posts zone
@@ -29,6 +30,7 @@ get_header(); ?>
 					] );
 				?>
 			</section>
+			<?php endif; ?>
 
 			<section class="home-section home-section--portfolio">
 				<?php
