@@ -62,9 +62,12 @@ a {
 
 // Media
 img {
-
 	&.alignright {
 		float: right;
+	}
+
+	&.alignleft {
+		float: left;
 	}
 }
 
@@ -111,10 +114,20 @@ dd {
 
 }
 
-// Code
+/* Code
+ */
+
+// Inline Code
 code {
-	padding: spacer(0.5) spacer(1) spacer(0.5) spacer(3);
+	padding: rem(2) rem(4);
 	border: $border--solid;
-	display: block;
 	background: fade-out(color(grey-very-light), 0.75);
+	margin: 0 rem(4);
+}
+
+// Code Block
+pre code {
+	padding-left: spacer(3);
+	display: block;
+	margin: 0 auto inherit;
 }
