@@ -66,8 +66,24 @@ img {
 		float: right;
 	}
 
+	&.aligncenter,
+	&.alignnone {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	&.alignleft {
 		float: left;
+	}
+
+	&.alignnone {
+		display: block;
+
+		.size-full {
+			@include full-bleed(auto);
+			max-width: 100vw;
+		}
 	}
 }
 
