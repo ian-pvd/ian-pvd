@@ -23,7 +23,8 @@
 	}
 }
 
-[class*="work-submenu"] {
+[class*="work-submenu"],
+[class*="resume-submenu"] {
 	@include wrapper($width--content);
 	margin: spacer(-1.5) auto spacer(3);
 

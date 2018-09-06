@@ -8,21 +8,21 @@
 */
 function ianpvd_get_versioned_asset( $asset ) {
 	$assets = array(
-		'work-js' => 'js/work.a08f333.bundle.min.js',
-		'work-css' => 'css/work.996349424e274145146e.min.css',
-		'site-js' => 'js/site.a08f333.bundle.min.js',
-		'site-css' => 'css/site.996349424e274145146e.min.css',
-		'page-js' => 'js/page.a08f333.bundle.min.js',
-		'page-css' => 'css/page.996349424e274145146e.min.css',
-		'home-js' => 'js/home.a08f333.bundle.min.js',
-		'home-css' => 'css/home.996349424e274145146e.min.css',
-		'article-js' => 'js/article.a08f333.bundle.min.js',
-		'article-css' => 'css/article.996349424e274145146e.min.css',
-		'archive-js' => 'js/archive.a08f333.bundle.min.js',
-		'archive-css' => 'css/archive.996349424e274145146e.min.css',
-		'admin-js' => 'js/admin.a08f333.bundle.min.js',
-		'admin-css' => 'css/admin.996349424e274145146e.min.css',
-		'common-js' => 'js/common.a08f333.bundle.min.js',
+		'work-js' => 'js/work.cbe2d3e.bundle.min.js',
+		'work-css' => 'css/work.b234f364eb2aca09bbec.min.css',
+		'site-js' => 'js/site.cbe2d3e.bundle.min.js',
+		'site-css' => 'css/site.b234f364eb2aca09bbec.min.css',
+		'page-js' => 'js/page.cbe2d3e.bundle.min.js',
+		'page-css' => 'css/page.b234f364eb2aca09bbec.min.css',
+		'home-js' => 'js/home.cbe2d3e.bundle.min.js',
+		'home-css' => 'css/home.b234f364eb2aca09bbec.min.css',
+		'article-js' => 'js/article.cbe2d3e.bundle.min.js',
+		'article-css' => 'css/article.b234f364eb2aca09bbec.min.css',
+		'archive-js' => 'js/archive.cbe2d3e.bundle.min.js',
+		'archive-css' => 'css/archive.b234f364eb2aca09bbec.min.css',
+		'admin-js' => 'js/admin.cbe2d3e.bundle.min.js',
+		'admin-css' => 'css/admin.b234f364eb2aca09bbec.min.css',
+		'common-js' => 'js/common.cbe2d3e.bundle.min.js',
 	);
 	return ! empty( $assets[ $asset ] ) ? $assets[ $asset ] : false;
 }
