@@ -16,7 +16,6 @@ body {
 
 	@include breakpoints(none, medium) {
 		max-width: 100vw;
-		overflow-x: hidden;
 	}
 }
 
