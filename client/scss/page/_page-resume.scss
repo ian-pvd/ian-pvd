@@ -3,46 +3,99 @@
  * Custom styles overrides for Resume Page
  */
 
-.post-content--resume {
-	h2,
-	h3,
-	p,
-	ul {
-		margin-bottom: 0;
-	}
+.post-header__content--resume,
+.post-content--resume,
+.menu-resume-submenu-container {
+	@include wrapper();
+}
 
-	h2,
-	h3 {
-		font-family: font-family(display);
+.post-content--resume {
+	@include breakpoints(small) {
+		display: flex;
+		flex-wrap: wrap;
+
+		.resume__section--col-one-third,
+		.resume__section--col-two-thirds {
+			flex: 0 0 auto;
+		}
+
+		.resume__section--col-one-third {
+				width: calc(100% / 3);
+				margin-right: spacer(3);
+		}
+
+		.resume__section--col-two-thirds {
+				width: calc(((100% / 3) * 2) - #{spacer(3)} );
+		}
+
+		.resume__section--experience {
+				order: 2;
+		}
+
+		.resume__section--skills {
+				order: 1;
+		}
+
+		.resume__section--involvement {
+				order: 3;
+		}
+
+		.resume__section--education {
+				order: 4;
+		}
 	}
 
 	h2 {
-		padding-bottom: spacer(0.25);
-		margin-bottom: 0;
-		font-size: rem(24);
+		padding-bottom: spacer(0.5);
+		border-bottom: $border--solid-dark;
+	}
+
+	h3,
+	h4 {
+		color: $color-text;
+		padding: 0;
+		border: none;
+		margin-bottom: spacer(0.125);
 	}
 
 	h3 {
+		font-size: rem(22);
+	}
+
+	.resume__section--experience {
+		h3 {
+			// text-transform: none;
+		}
+	}
+
+	h4 {
+		font-size: rem(18);
+		margin-bottom: spacer(1);
 		text-transform: none;
 
-		+ p {
-			font-size: rem(12);
-			text-transform: uppercase;
+		+ h4 {
+			margin-top: spacer(-1);
 		}
+	}
+
+	p {
+		margin-bottom: spacer(1.5);
 	}
 
 	ul {
 		list-style: none;
-		font-size: rem(14);
+		margin-bottom: spacer(1.5);
+		font-size: rem(15);
 
 		li {
-			position: relative;
+			margin-left: spacer(-1);
+			line-height: calc(9 / 6);
+			margin-bottom: spacer(0.5);
 
 			&::before {
-				content: '-';
-				display: inline-block;
+				content: "\2013";
+				margin-right: spacer(1);
 				margin-left: spacer(-1.5);
-				margin-right: spacer(0.75);
 			}
 		}
 	}
