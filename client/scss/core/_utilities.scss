@@ -206,7 +206,22 @@
  *
  */
 
-@mixin dev-block($color: red, $background: rgba(255,255,0,0.1), $outline: 1px dotted $color) {
-	outline: $outline;
-	background: $background;
+/* Dev Block Inspector
+ *
+ * Adds a high contrast outline to the specified element to highlight
+ * the box edge and layout.
+ *
+ * @param {string} $color (red) - outline color
+ * @param {string} $background (yellow) - background highlight
+ * @param {string} $outline (dotted) - outline style
+ */
+
+@mixin dev-block($color: red, $background: yellow, $outline: dotted) {
+  outline: 1px $outline $color;
+  background: fade-out($background, 0.95);
+
+  &:hover {
+    outline: 2px $outline $color;
+    background: fade-out($background, 0.75);
+  }
 }
