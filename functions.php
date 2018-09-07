@@ -50,6 +50,7 @@ function ianpvd_setup() {
 		'primary-nav' => esc_html__( 'Primary', 'ianpvd' ),
 		'social-links' => esc_html__( 'Social Links', 'ian' ),
 		'work-submenu' => esc_html__( 'Work Submenu', 'ian' ),
+		'resume-submenu' => esc_html__( 'Resume Submenu', 'ian' ),
 	) );
 
 	/*
