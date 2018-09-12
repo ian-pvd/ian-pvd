@@ -39,6 +39,7 @@
     "webpack-stats-plugin": "0.1.4"
   },
   "dependencies": {
+    "prismjs": "^1.15.0",
     "webfontloader": "^1.6.27"
   },
   "browserslist": [
