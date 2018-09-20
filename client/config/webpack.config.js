@@ -139,8 +139,15 @@ module.exports = function(env) {
             'style-loader',
             'css-loader?modules&localIdentName=[name]__[local]__[hash:base64:5]&-autoprefixer',
             'postcss-loader',
-            'sass-loader'
-          ]
+            'sass-loader',
+          ],
+        },
+        {
+          test: /\.css$/,
+          use: [
+            'style-loader',
+            'css-loader',
+          ],
         },
         {
           test: /\.png(\?v=\d+\.\d+\.\d+)?$/,
