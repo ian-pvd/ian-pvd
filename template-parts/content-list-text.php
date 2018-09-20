@@ -21,14 +21,9 @@
 		<span class="post-meta__value post-meta__category"><?php pvd_the_post_category(); ?></span>
 	</div>
 
-	<?php if ( pvd_get_the_post_header() ) : ?>
+	<?php if ( $post->post_excerpt ) : ?>
 	<div class="post-list__item-excerpt wp-content">
-		<?php
-			pvd_the_post_header( [
-				'em' => [],
-				'strong' => [],
-			] );
-		?>
+		<?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
 	</div>
 	<?php endif; ?>
 </article>

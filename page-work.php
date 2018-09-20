@@ -23,14 +23,14 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-		<?php if ( wp_count_posts()->publish > 6 ) : ?>
+		<?php if ( wp_count_posts()->publish >= 3 ) : ?>
 		<section class="page-section page-section--blog">
 			<?php
 				pvd_post_list( [
 					'list_format' => 'column',
 					'post_format' => 'text',
 					'query_vars' => [
-						'posts_per_page' => 6,
+						'posts_per_page' => 3,
 						'cat' => $category_id,
 					],
 					'read_more' => get_category_link( $category_id ),
