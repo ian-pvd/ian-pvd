@@ -151,11 +151,33 @@ code {
 }
 
 // Code Block
-pre code {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding: spacer(0.75) spacer(1.5) spacer(0.75) spacer(3);
+pre {
+	border: $border--solid;
+	max-height: 60vh;
+	overflow: scroll;
+	background: fade-out(color(grey-very-light), 0.75);
+
+	&[class*="language-"] {
+		margin-bottom: spacer(1.5);
+		padding: spacer(0.75) spacer(1.5) spacer(0.75) 0;
+
+		@include breakpoints(medium) {
+			@include full-bleed(48rem);
+			padding: spacer(1.5);
+			padding-bottom: 0;
+		}
+	}
+
+	code {
+		font-size: calc(7/8rem);
+		background: none;
+		padding: 0;
+		border: none;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: spacer(1.5);
+	}
 }
 
 // Special Content
