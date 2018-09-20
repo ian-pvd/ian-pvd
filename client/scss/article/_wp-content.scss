@@ -179,17 +179,3 @@ pre {
 		margin-bottom: spacer(1.5);
 	}
 }
-
-// Special Content
-.example-dev-block {
-	@include dev-block;
-	width: 240px;
-	text-align: center;
-	padding: 1.5em;
-	margin: 3em auto;
-
-	.example-dev-block {
-		max-width: 100%;
-		margin: 1.5em auto 0;
-	}
-}

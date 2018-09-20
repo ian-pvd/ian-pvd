@@ -4,19 +4,19 @@
   ],
   "plugins": [
     ["prismjs", {
-        "languages": [
-          "applescript",
-          "bash",
-          "css",
-          "javascript",
-          "json",
-          "markup",
-          "php",
-          "scss"
-        ],
-        "plugins": ["line-numbers"],
-        "theme": "default",
-        "css": true
+      "languages": [
+        "applescript",
+        "bash",
+        "css",
+        "javascript",
+        "json",
+        "markup",
+        "php",
+        "scss"
+      ],
+      "plugins": ["line-numbers"],
+      "theme": "default",
+      "css": true
     }]
   ]
 }
