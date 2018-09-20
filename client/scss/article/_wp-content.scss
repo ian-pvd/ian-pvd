@@ -151,11 +151,18 @@ code {
 }
 
 // Code Block
-pre code {
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
-	padding: spacer(0.75) spacer(1.5) spacer(0.75) spacer(3);
+pre {
+	max-height: 60vh;
+	overflow: scroll;
+
+	code {
+		border: none;
+		display: block;
+		font-size: calc(7/8rem);
+		margin-left: auto;
+		margin-right: auto;
+		padding: 0;
+	}
 }
 
 // Special Content
