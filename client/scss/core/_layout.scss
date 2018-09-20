@@ -10,6 +10,7 @@
 // Variable Width Full Bleed Mixin
 @mixin full-bleed($width: 100vw) {
 	margin-left: 50%;
+	max-width: none;
 	transform: translateX(-50%);
 	width: #{$width};
 }

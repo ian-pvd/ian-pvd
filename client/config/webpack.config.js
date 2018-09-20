@@ -22,7 +22,7 @@ const autoprefixer = require('autoprefixer');
 const processEntry = require('./processEntry');
 const processPlugins = require('./processPlugins');
 
-module.exports = function(env) {
+module.exports = function (env) {
   env.singleEntry = process.env.ENTRY || false;
 
   // Define postCSS plugin options
@@ -49,14 +49,14 @@ module.exports = function(env) {
         plugins: postCSSPlugins,
       },
     },
-    'sass-loader'
+    'sass-loader',
   ];
 
   return {
     entry: processEntry(
       // Default Theme Entry Point
       {
-       site: ['client/js/site/site.js'],
+        site: ['client/js/site/site.js'],
       },
 
       // Custom Theme Entry Points
@@ -93,13 +93,13 @@ module.exports = function(env) {
     resolve: {
       modules: [
         buildRoot,
-        'node_modules'
-      ]
+        'node_modules',
+      ],
     },
 
     // Enable require('jquery') where jquery is already a global
     externals: {
-      'jquery': 'jQuery',
+      jquery: 'jQuery',
     },
 
     // Plugins array we configured above
@@ -201,4 +201,4 @@ module.exports = function(env) {
       stats: { colors: true },
     },
   };
-}
+};
