@@ -18,12 +18,16 @@
 
 	ul {
 		display: flex;
-		list-style: none;
 		margin: 0;
 	}
 
 	li {
 		flex: 0 0 calc(100% / 5);
+		margin: 0;
+
+		&::before {
+			content: '';
+		}
 	}
 
 	a {

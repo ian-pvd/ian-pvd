@@ -83,20 +83,11 @@
 	}
 
 	ul {
-		list-style: none;
 		margin-bottom: spacer(1.5);
 		font-size: rem(15);
+	}
 
-		li {
-			margin-left: spacer(-1);
-			line-height: calc(9 / 6);
-			margin-bottom: spacer(0.5);
-
-			&::before {
-				content: "\2013";
-				margin-right: spacer(1);
-				margin-left: spacer(-1.5);
-			}
-		}
+	li {
+		margin: 0 0 spacer(0.5) spacer(-1);
 	}
 }
