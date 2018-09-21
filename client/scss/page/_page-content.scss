@@ -17,8 +17,8 @@
 	padding: spacer(1) 0 0;
 
 	ul {
-		list-style: none;
 		display: flex;
+		list-style: none;
 		margin: 0;
 	}
 
@@ -29,13 +29,22 @@
 	a {
 		display: flex;
 		flex-direction: column;
-		max-height: 4em;
+		max-height: 3em;
 		overflow: hidden;
 
+		@include breakpoints(medium) {
+			max-height: 4em;
+		}
+
 		&::before {
-			min-height: 4em;
-			width: 4em;
 			margin-bottom: 1em;
+			min-height: 3em;
+			width: 3em;
+
+			@include breakpoints(medium) {
+				min-height: 4em;
+				width: 4em;
+			}
 		}
 	}
 }

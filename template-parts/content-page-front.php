@@ -21,13 +21,13 @@ if ( pvd_get_the_post_header() ) {
 			}
 		?>
 
+		<?php if ( pvd_get_the_post_header() ) : ?>
 		<div class="post-header__content">
-			<?php if ( pvd_get_the_post_header() ) : ?>
 			<div class="post-header__intro">
 				<?php pvd_the_post_header(); ?>
 			</div>
-			<?php endif; ?>
 		</div>
+		<?php endif; ?>
 
 	</header><!-- .post-header -->
 
