@@ -11,8 +11,35 @@
 	padding-bottom: spacer(3);
 }
 
+.featured-image__frame {
+	.skip-to {
+		@include horizontal-center;
+		animation-duration: 500ms;
+		animation-name: sideDown, fadeIn;
+		animation-timing-function: ease-in;
+		background: fade-out($color-secondary, 0.75);
+		border-radius: rem(2);
+		bottom: spacer(1.5);
+		height: 3rem;
+		overflow: hidden;
+		text-indent: 101%;
+		white-space: nowrap;
+		width: 4rem;
+
+		&::before {
+			@include pseudo-block(1.5rem, 1.5rem);
+			@include absolute-center;
+			border: $border--solid-dark;
+			border-right: none;
+			border-top: none;
+			transform: translate(-50%, -1.125rem) rotate(-45deg);
+		}
+	}
+}
+
 .post-content {
 	font-size: rem(18);
+	padding-top: spacer(3);
 	text-align: center;
 
 	p:first-of-type {
