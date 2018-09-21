@@ -64,11 +64,23 @@
 // Variable width wrapper mixin
 @mixin wrapper($max-width: $width--site, $padding: false) {
 	@include center-margins;
-	max-width: $max-width;
 	width: 100%;
 
-	@if ($padding) {
-		padding-left: $padding;
-		padding-right: $padding;
+	@include breakpoints(none, medium) {
+		max-width: $width--site;
+
+		@if ($max-width == $width--content) {
+			max-width: $width--content;
+			padding-left: 5%;
+			padding-right: 5%;
+		}
+		@else {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
+
+	@include breakpoints(medium) {
+		max-width: $max-width;
 	}
 }

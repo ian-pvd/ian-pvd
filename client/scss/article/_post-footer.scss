@@ -5,15 +5,7 @@
 
 .post-footer,
 .page-footer {
-	@include wrapper($width--mobile);
-
-	@include breakpoints(small) {
-		@include wrapper($width--tablet);
-	}
-
-	@include breakpoints(medium) {
-		@include wrapper($width--content);
-	}
+	@include wrapper($width--content);
 }
 
 .author {
