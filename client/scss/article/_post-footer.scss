@@ -5,7 +5,11 @@
 
 .post-footer,
 .page-footer {
-	@include wrapper($width--content);
+	@include wrapper($width--tablet);
+
+	@include breakpoints(medium) {
+		@include wrapper($width--content);
+	}
 }
 
 .author {

@@ -66,21 +66,27 @@
 	@include center-margins;
 	width: 100%;
 
-	@include breakpoints(none, medium) {
-		max-width: $width--site;
-
-		@if ($max-width == $width--content) {
-			max-width: $width--content;
-			padding-left: 5%;
-			padding-right: 5%;
-		}
-		@else {
-			padding-left: 1.5rem;
-			padding-right: 1.5rem;
-		}
-	}
-
-	@include breakpoints(medium) {
+	@if ($max-width < $width--content ) {
 		max-width: $max-width;
+	}
+	@else {
+
+		@include breakpoints(none, medium) {
+			max-width: $width--site;
+
+			@if ($max-width == $width--content) {
+				max-width: $width--content;
+				padding-left: 5%;
+				padding-right: 5%;
+			}
+			@else {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+		}
+
+		@include breakpoints(medium) {
+			max-width: $max-width;
+		}
 	}
 }
