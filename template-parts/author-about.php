@@ -9,7 +9,7 @@
 
 <div class="author">
 	<div class="author__image">
-		<?php echo get_avatar( get_the_author_meta( 'ID' ), 128 ); ?>
+		<?php echo get_avatar( get_the_author_meta( 'ID' ), 512 ); ?>
 	</div>
 
 	<div class="author__about">

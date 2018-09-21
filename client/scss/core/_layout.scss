@@ -62,31 +62,13 @@
 }
 
 // Variable width wrapper mixin
-@mixin wrapper( $max-width: $width--site ) {
-	margin-left: auto;
-	margin-right: auto;
+@mixin wrapper($max-width: $width--site, $padding: false) {
+	@include center-margins;
+	max-width: $max-width;
+	width: 100%;
 
-	@if ( $max-width < $width--site ) {
-		width: calc(100% - #{spacer(3)});
-	}
-	@else {
-		width: calc(100% - #{spacer(2)});
-	}
-
-	@include breakpoints(small) {
-		// Tablet Styles
-		@if ( $max-width < $width--site ) {
-			width: calc(100% - #{spacer(8)});
-		}
-		@else {
-			width: calc(100% - #{spacer(4)});
-		}
-	}
-
-	@include breakpoints(medium) {
-		// Desktop Styles
-		max-width: $max-width;
-		width: 100%;
+	@if ($padding) {
+		padding-left: $padding;
+		padding-right: $padding;
 	}
 }
-
