@@ -153,18 +153,20 @@ code {
 // Code Block
 pre {
 	border: $border--solid;
-	max-height: 60vh;
-	overflow: scroll;
 	background: fade-out(color(grey-very-light), 0.75);
+
+	@include breakpoints(medium) {
+		max-height: 60vh;
+		overflow: scroll;
+	}
 
 	&[class*="language-"] {
 		margin-bottom: spacer(1.5);
-		padding: spacer(0.75) spacer(1.5) spacer(0.75) 0;
+		padding: spacer(1.5);
+		padding-bottom: 0;
 
 		@include breakpoints(medium) {
 			@include full-bleed(48rem);
-			padding: spacer(1.5);
-			padding-bottom: 0;
 		}
 	}
 

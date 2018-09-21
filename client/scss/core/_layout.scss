@@ -67,7 +67,7 @@
 	margin-right: auto;
 
 	@if ( $max-width < $width--site ) {
-		width: calc(100% - #{spacer(5)});
+		width: calc(100% - #{spacer(3)});
 	}
 	@else {
 		width: calc(100% - #{spacer(2)});

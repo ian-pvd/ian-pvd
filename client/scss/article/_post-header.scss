@@ -59,8 +59,12 @@
 
 .post-title,
 .page-title {
-	font-size: rem(48);
+	font-size: rem(40);
 	font-weight: 700;
 	line-height: 1;
 	margin-bottom: spacer(2);
+
+	@include breakpoints(medium) {
+		font-size: rem(48);
+	}
 }

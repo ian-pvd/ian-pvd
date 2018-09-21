@@ -6,7 +6,11 @@
 .post-content,
 .page-content {
 	@include wrapper( $width--content );
-	margin-bottom: spacer(6);
+	margin-bottom: spacer(3);
+
+	@include breakpoints(medium) {
+		margin-bottom: spacer(6);
+	}
 
 	&.page-content--error-404 {
 		@include wrapper;
