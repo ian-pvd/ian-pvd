@@ -20,7 +20,19 @@
 }
 
 .post-list__feed--grid-thirds {
-	@include grid(3, spacer(3), wrap);
+	$grid: (
+		small: (
+			cols: 2,
+			gutter: spacer(3),
+			wrap: wrap,
+		),
+		medium: (
+			cols: 3,
+			gutter: spacer(3),
+			wrap: wrap,
+		),
+	);
+	@include grid(1, spacer(3), wrap, $grid);
 }
 
 .post-list__feed--featured-posts {

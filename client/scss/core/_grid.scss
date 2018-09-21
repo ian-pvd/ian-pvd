@@ -3,7 +3,18 @@
  * Default values for theme grid
  */
 
-@mixin grid($cols: 4, $gutter: rem(20), $wrap: wrap) {
+@mixin grid(
+	$cols: 1,
+	$gutter: spacer(3),
+	$wrap: wrap,
+	$breakpoints: (
+		small: (
+			cols: 3,
+			gutter: spacer(3),
+			wrap: wrap,
+		),
+	)
+) {
 	display: flex;
 	flex-wrap: $wrap;
 
@@ -17,17 +28,27 @@
 		}
 	}
 
-	@include breakpoints(small) {
-		> * {
-			margin-right: #{$gutter};
-			width: calc( ( 100% - ( ( #{$cols} - 1 ) * #{$gutter} ) ) / #{$cols} );
+	@if ('map' == type-of($breakpoints)) {
 
-			&:nth-child(#{$cols}n) {
-				margin-right: 0;
-			}
+		@each $breakpoint, $values in $breakpoints {
+			// @if map-another-value($breakpoint) {
+				// @include breakpoints($breakpoint+1) {
+			// }
+			// @else {
+				@include breakpoints($breakpoint) {
+			// }
+				> * {
+					margin-right: #{map-get($values, gutter)};
+					width: calc( ( 100% - ( ( #{map-get($values, cols)} - 1 ) * #{map-get($values, gutter)} ) ) / #{map-get($values, cols)} );
 
-			&:nth-last-child(-n+#{$cols}) {
-				margin-bottom: 0;
+					&:nth-child(#{map-get($values, cols)}n) {
+						margin-right: 0;
+					}
+
+					&:nth-last-child(-n+#{map-get($values, cols)}) {
+						margin-bottom: 0;
+					}
+				}
 			}
 		}
 	}
