@@ -18,7 +18,7 @@ function pvd_get_post_list_defaults() {
 	$defaults = [
 		'context' => 'recent-posts',
 		'list_title' => 'Recent Posts',
-		'list_format' => 'grid-thirds',
+		'list_format' => 'touts',
 		'list_description' => NULL,
 		'post_format' => 'tout',
 		'query_vars' => [

@@ -17,7 +17,7 @@ get_header(); ?>
 					<?php the_archive_title( '<h1 class="archive-title">', '</h1>' ); ?>
 				</header><!-- .page-header -->
 
-				<div class="post-list__feed post-list__feed--archive post-list__feed--grid-thirds">
+				<div class="post-list__feed post-list__feed--archive post-list__feed--touts">
 
 				<?php
 				if ( have_posts() ) :

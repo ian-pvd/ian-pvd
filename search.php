@@ -23,7 +23,7 @@ get_header(); ?>
 
 				<?php if ( have_posts() ) : ?>
 
-					<div class="post-list__feed post-list__feed--search post-list__feed--grid-thirds">
+					<div class="post-list__feed post-list__feed--search post-list__feed--touts">
 					<?php
 					/* Start the Loop */
 					while ( have_posts() ) : the_post();

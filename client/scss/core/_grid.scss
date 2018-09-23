@@ -3,53 +3,9 @@
  * Default values for theme grid
  */
 
-@mixin grid(
-	$cols: 1,
-	$gutter: spacer(3),
-	$wrap: wrap,
-	$breakpoints: (
-		small: (
-			cols: 3,
-			gutter: spacer(3),
-			wrap: wrap,
-		),
-	)
-) {
-	display: flex;
-	flex-wrap: $wrap;
-
-	> * {
-		flex: 0 0 auto;
-		margin-bottom: #{$gutter};
-		width: 100%;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	@if ('map' == type-of($breakpoints)) {
-
-		@each $breakpoint, $values in $breakpoints {
-			// @if map-another-value($breakpoint) {
-				// @include breakpoints($breakpoint+1) {
-			// }
-			// @else {
-				@include breakpoints($breakpoint) {
-			// }
-				> * {
-					margin-right: #{map-get($values, gutter)};
-					width: calc( ( 100% - ( ( #{map-get($values, cols)} - 1 ) * #{map-get($values, gutter)} ) ) / #{map-get($values, cols)} );
-
-					&:nth-child(#{map-get($values, cols)}n) {
-						margin-right: 0;
-					}
-
-					&:nth-last-child(-n+#{map-get($values, cols)}) {
-						margin-bottom: 0;
-					}
-				}
-			}
-		}
-	}
+@mixin grid($cols: 3, $gutter: spacer(1)) {
+	display: grid;
+	grid-gap: $gutter;
+	grid-template-columns: repeat($cols, 1fr);
+	justify-items: stretch;
 }

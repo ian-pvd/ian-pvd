@@ -20,7 +20,7 @@ get_header(); ?>
 
 				<?php if ( have_posts() ) : ?>
 
-					<div class="post-list__feed post-list__feed--blog post-list__feed--grid-thirds">
+					<div class="post-list__feed post-list__feed--blog post-list__feed--touts">
 
 					<?php
 					/* Start the Loop */
