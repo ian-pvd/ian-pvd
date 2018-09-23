@@ -60,6 +60,12 @@
 	width: 100%;
 }
 
+// Center Margins
+@mixin center-margins() {
+	margin-left: auto;
+	margin-right: auto;
+}
+
 // Absolute Center
 @mixin absolute-center() {
 	display: block;
@@ -67,6 +73,14 @@
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+}
+
+// Horizontal Center
+@mixin horizontal-center() {
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 // Scale image to fill container

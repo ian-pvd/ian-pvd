@@ -3,32 +3,9 @@
  * Default values for theme grid
  */
 
-@mixin grid($cols: 4, $gutter: rem(20), $wrap: wrap) {
-	display: flex;
-	flex-wrap: $wrap;
-
-	> * {
-		flex: 0 0 auto;
-		margin-bottom: #{$gutter};
-		width: 100%;
-
-		&:last-child {
-			margin-bottom: 0;
-		}
-	}
-
-	@include breakpoints(small) {
-		> * {
-			margin-right: #{$gutter};
-			width: calc( ( 100% - ( ( #{$cols} - 1 ) * #{$gutter} ) ) / #{$cols} );
-
-			&:nth-child(#{$cols}n) {
-				margin-right: 0;
-			}
-
-			&:nth-last-child(-n+#{$cols}) {
-				margin-bottom: 0;
-			}
-		}
-	}
+@mixin grid($cols: 3, $gutter: spacer(1)) {
+	display: grid;
+	grid-gap: $gutter;
+	grid-template-columns: repeat($cols, 1fr);
+	justify-items: stretch;
 }

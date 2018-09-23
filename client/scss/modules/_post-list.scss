@@ -19,12 +19,16 @@
 	margin: spacer(-1) 0 spacer(1);
 }
 
-.post-list__feed--grid-thirds {
-	@include grid(3, spacer(3), wrap);
-}
+.post-list__feed--touts {
+	@include grid(1, spacer(3));
 
-.post-list__feed--featured-posts {
-	@include grid(2, spacer(3), wrap);
+	@include breakpoints(small, large) {
+		@include grid(2, spacer(3));
+	}
+
+	@include breakpoints(large) {
+		@include grid(3, spacer(3));
+	}
 }
 
 .post-list__feed--column {

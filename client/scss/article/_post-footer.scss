@@ -5,11 +5,15 @@
 
 .post-footer,
 .page-footer {
-	@include wrapper($width--content);
+	@include wrapper($width--mobile);
+
+	@include breakpoints(small) {
+		@include wrapper($width--content);
+	}
 }
 
 .author {
-	@include breakpoints(medium) {
+	@include breakpoints(small) {
 		display: flex;
 	}
 }
@@ -22,14 +26,14 @@
 		width: 100%;
 	}
 
-	@include breakpoints(medium) {
+	@include breakpoints(small) {
 		margin: 0 spacer(3) 0 0;
 		flex: 0 0 rem(128);
 	}
 }
 
 .author__about {
-	@include breakpoints(medium) {
+	@include breakpoints(small) {
 		flex: 0 1 auto;
 	}
 }
@@ -38,7 +42,7 @@
 	font-size: rem(20);
 	margin-bottom: spacer(0.5);
 
-	@include breakpoints(medium) {
+	@include breakpoints(small) {
 		font-size: rem(18);
 	}
 }

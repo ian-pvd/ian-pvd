@@ -5,10 +5,11 @@
 
 $breakpoints: (
 	x-small: 320px,
-	small: 640px,
-	medium: 1024px,
-	large: 1600px,
-	x-large: 2800px,
+	small: 512px,
+	medium: 768px,
+	large: 1024px,
+	x-large: 1600px,
+	xx-large: 2800px,
 );
 
 // SCSS Breakpoint shortcut mixin

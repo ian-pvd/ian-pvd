@@ -27,6 +27,8 @@
 		</div>
 		<?php endif; ?>
 
+		<a href="#post-content" class="skip-to">Skip To Content</a>
+
 	</div>
 
 	<?php if ( get_the_post_thumbnail_caption() ): ?>

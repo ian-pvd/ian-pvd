@@ -32,11 +32,17 @@ $font-branding: 2rem/1 font-family(display);
  * Custom theme values
  */
 
-// Max site width
-$width--site: 54rem;
+// Max mobile width
+$width--mobile: 20rem;
+
+// Max tablet width
+$width--tablet: 32rem;
 
 // Max content width
 $width--content: 44rem;
+
+// Max site width
+$width--site: 54rem;
 
 // Theme Layout Vars
 $height--site-header-content: rem(32);
