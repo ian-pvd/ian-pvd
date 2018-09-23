@@ -10,7 +10,7 @@
 }
 
 .post-content--resume {
-	@include breakpoints(small) {
+	@include breakpoints(medium) {
 		display: flex;
 		flex-wrap: wrap;
 
@@ -60,12 +60,6 @@
 
 	h3 {
 		font-size: rem(22);
-	}
-
-	.resume__section--experience {
-		h3 {
-			// text-transform: none;
-		}
 	}
 
 	h4 {

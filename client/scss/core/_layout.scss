@@ -71,7 +71,7 @@
 	}
 	@else {
 
-		@include breakpoints(none, medium) {
+		@include breakpoints(none, large) {
 			max-width: $width--site;
 
 			@if ($max-width == $width--content) {
@@ -85,7 +85,7 @@
 			}
 		}
 
-		@include breakpoints(medium) {
+		@include breakpoints(large) {
 			max-width: $max-width;
 		}
 	}

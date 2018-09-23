@@ -4,9 +4,13 @@
  */
 
 form.contact-form {
-	@include breakpoints(medium) {
+	@include breakpoints(small) {
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	@include breakpoints(medium) {
+		flex-flow: row wrap;
 	}
 
 	> div {
@@ -94,7 +98,7 @@ form.contact-form {
 		line-height: 1;
 		padding: spacer(0.75) spacer(1.5);
 
-		@include breakpoints(medium) {
+		@include breakpoints(small) {
 			width: auto;
 		}
 	}

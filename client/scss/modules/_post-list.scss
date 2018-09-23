@@ -22,11 +22,11 @@
 .post-list__feed--touts {
 	@include grid(1, spacer(3));
 
-	@include breakpoints(512px, medium) {
+	@include breakpoints(small, large) {
 		@include grid(2, spacer(3));
 	}
 
-	@include breakpoints(medium) {
+	@include breakpoints(large) {
 		@include grid(3, spacer(3));
 	}
 }
