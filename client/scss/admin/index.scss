@@ -6,7 +6,7 @@
 @import '../core/index';
 
 .fm-work_item {
-	@include vertical-rhythym(spacer(1), spacer(1), 1px dotted #E5E5E5);
+	@include vertical-rhythm(spacer(1), spacer(1), 1px dotted #E5E5E5);
 
 	.fm-wrapper {
 		input[type="text"],

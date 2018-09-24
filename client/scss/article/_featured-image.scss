@@ -44,7 +44,7 @@
 	}
 
 	&:hover {
-		background: fade-out(#000000, 0.5);
+		background: fade-out(color(black), 0.5);
 
 		.featured-image__wrapper {
 			opacity: 1;

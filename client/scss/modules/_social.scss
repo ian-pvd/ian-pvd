@@ -5,11 +5,12 @@
 
 // Social Links Menu Widget
 [class^="menu-social-links"] {
+	font-size: rem(14);
+
 	a {
 		@include link-hover;
 		color: inherit;
 		display: flex;
-		font-size: rem(14);
 		align-items: center;
 
 		&::before {

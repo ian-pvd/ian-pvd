@@ -9,6 +9,9 @@
 // Load HTML Reset
 @import 'reset';
 
+// Load Module Styles
+@import '../modules/social';
+
 // Load Global Site Styles
 @import 'site';
 @import 'site-header';

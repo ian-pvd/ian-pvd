@@ -6,7 +6,7 @@
 .post-header__content,
 .page-header__content {
 	@include wrapper( $width--content );
-	@include vertical-rhythym(spacer(1.5));
+	@include vertical-rhythm(spacer(1.5));
 	padding: spacer(3) 0;
 
 	&.page-header__content--error-404 {

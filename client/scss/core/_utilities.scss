@@ -38,6 +38,12 @@
 	}
 }
 
+@mixin hide-text() {
+	overflow: hidden;
+	text-indent: 101%;
+	white-space: nowrap;
+}
+
 // Aspect Ratio
 @mixin aspect-ratio($width: 3, $height: 2) {
 	display: block;
@@ -238,4 +244,11 @@
     outline: 2px $outline $color;
     background: fade-out($background, 0.75);
   }
+}
+
+// Reset Default Browser Button Styles
+@mixin reset-button() {
+	background-color: transparent;
+	border: none;
+	padding: 0;
 }

@@ -16,7 +16,7 @@
 }
 
 // Adds vertical spacing to all child elements but the last
-@mixin vertical-rhythym($margin: spacer(1), $padding: 0, $border: none) {
+@mixin vertical-rhythm($margin: spacer(1), $padding: 0, $border: none) {
 	> * {
 		border-bottom: $border;
 		margin-bottom: $margin;

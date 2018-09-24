@@ -47,7 +47,7 @@
 	// Social Links Menu Widget
 	[class^="menu-social-links"] {
 		ul {
-			@include vertical-rhythym(spacer(0.5), spacer(0.5), $border--dotted-light);
+			@include vertical-rhythm(spacer(0.5), spacer(0.5), $border--dotted-light);
 		}
 	}
 
