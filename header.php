@@ -36,15 +36,27 @@
 				endif; ?>
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation main-navigation--priority-nav" role="navigation">
-				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ianpvd' ); ?></button>
-				<?php
-					wp_nav_menu( array(
-						'theme_location' => 'primary-nav',
-						'menu_id'        => 'primary-menu',
-					) );
-				?>
-			</nav><!-- #site-navigation -->
+			<div class="site-navigation">
+				<button id="mobile-nav-toggle" class="site-navigation__mobile-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ianpvd' ); ?></button>
+				<div class="site-navigation__menu-wrapper">
+					<nav class="primary-menu primary-menu--top-level primary-menu--priority-nav" role="navigation">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'primary-nav',
+								'menu_id'        => 'primary-menu',
+							) );
+						?>
+					</nav>
+					<div class="social-menu">
+						<?php
+							wp_nav_menu( array(
+								'theme_location' => 'social-links',
+								'menu_id'        => 'social-links',
+							) );
+						?>
+					</div>
+				</div>
+			</div><!-- .site-navigation -->
 		</div>
 	</header><!-- #masthead -->
 

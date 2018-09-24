@@ -39,10 +39,10 @@ if ( pvd_get_the_post_header() ) {
 		<?php the_content(); ?>
 		<div class="social-block">
 		<?php
-		wp_nav_menu( array(
-			'theme_location' => 'social-links',
-			'menu_id'        => 'social-links',
-		) );
+			wp_nav_menu( array(
+				'theme_location' => 'social-links',
+				'menu_id'        => 'social-links',
+			) );
 		?>
 		</div>
 	</div><!-- .post-content -->
