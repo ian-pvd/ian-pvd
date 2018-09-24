@@ -22,11 +22,13 @@
 	}
 
 	li {
-		flex: 0 0 calc(100% / 5);
+		flex: 0 0 auto;
 		margin: 0;
+		width: calc(100% / 5);
 
 		&::before {
 			content: '';
+			display: none;
 		}
 	}
 
@@ -41,7 +43,7 @@
 		}
 
 		&::before {
-			margin-bottom: 1em;
+			margin: 0 auto;
 			min-height: 3em;
 			width: 3em;
 
