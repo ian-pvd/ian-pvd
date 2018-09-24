@@ -29,6 +29,10 @@
 	mask-size: cover;
 	width: $height--site-header-content;
 
+	.toggle__mobile-nav--active & {
+		mask: url(../../img/icon-close.svg) no-repeat center;
+	}
+
 	@include breakpoints(small) {
 		display: none;
 	}
