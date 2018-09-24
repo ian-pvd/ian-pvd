@@ -8,7 +8,7 @@
 	@include wrapper( $width--content );
 	margin-bottom: spacer(3);
 
-	@include breakpoints(medium) {
+	@include breakpoints(large) {
 		margin-bottom: spacer(6);
 	}
 

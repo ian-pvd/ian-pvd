@@ -4,8 +4,20 @@
  */
 
 .widget-area--social {
-	@include grid(3, spacer(3));
+	@include grid(1, spacer(3));
 	width: 100%;
+
+	@include breakpoints(small, large) {
+		@include grid(2, spacer(3));
+
+		> .widget:last-child {
+			display: none;
+		}
+	}
+
+	@include breakpoints(large) {
+		@include grid(3, spacer(3));
+	}
 }
 
 .widget-area__wrapper {

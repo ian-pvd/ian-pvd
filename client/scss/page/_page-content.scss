@@ -36,7 +36,7 @@
 		max-height: 3em;
 		overflow: hidden;
 
-		@include breakpoints(medium) {
+		@include breakpoints(small) {
 			max-height: 4em;
 		}
 
@@ -45,7 +45,7 @@
 			min-height: 3em;
 			width: 3em;
 
-			@include breakpoints(medium) {
+			@include breakpoints(small) {
 				min-height: 4em;
 				width: 4em;
 			}
