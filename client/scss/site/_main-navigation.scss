@@ -14,7 +14,7 @@
 	max-height: 100%;
 	text-transform: uppercase;
 
-	ul {
+	.menu {
 		@include vertical-rhythm(0, 0, $border--solid);
 		border-bottom: $border--solid;
 
@@ -35,16 +35,21 @@
 				}
 			}
 		}
-	}
 
-	a {
-		@include link-hover;
-		color: inherit;
-		display: block;
-		padding: 1em;
+		a {
+			color: inherit;
+			display: flex;
+			padding: 1em;
+			text-decoration: none;
 
-		@include breakpoints(small) {
-			color: $color-secondary;
+			&:active {
+				background: fade-out($color-secondary, 0.5);
+			}
+
+			@include breakpoints(small) {
+				@include link-hover;
+				color: $color-secondary;
+			}
 		}
 	}
 }
@@ -109,6 +114,7 @@
 }
 
 .social-menu {
+
 	@include breakpoints(small) {
 		display: none;
 	}
