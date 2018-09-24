@@ -18,7 +18,7 @@
 }
 
 .wp-content {
-	@include vertical-rhythym(spacer(1.5));
+	@include vertical-rhythm(spacer(1.5));
 
 	> * {
 		max-width: 100%;
