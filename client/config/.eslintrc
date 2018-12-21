@@ -24,12 +24,8 @@
   },
   "globals": {
     "jQuery": true,
-    "hollywoodlife": true,
     "isMobile": true,
-    "isHuron": true,
-    "huronBuild": true,
     "isProduction": true,
-    "isStyleguide": true,
     "angular": false, // Enable if using Angular
   },
   "settings": {
