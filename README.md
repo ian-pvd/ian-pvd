@@ -4,22 +4,6 @@
 
 I started working with CSS, PHP & MySQL as a professional web developer in 2009, and have 11 years experience working remotely for [WordPress VIP](https://wpvip.com/) partner agencies. You can check out my [portfolio](https://ian-pvd.github.io/portfolio/), view my [resume](https://ian-pvd.github.io/resume/), browse my [git repositories](https://github.com/ian-pvd?tab=repositories&sort=), read some [blog posts](https://ian-pvd.github.io/posts/), send me an [email](mailto:ianpvd+gh@gmail.com), or [tweet](https://www.twitter.com/ian_pvd) at me. I'm avialible [for hire](https://ian-pvd.github.io/contact/#hire-me) and ready to join a remote team as a front-end engineer.
 
-**🛠 Current Projects:**
-- Stonecutter WordPress starter theme
-- deep-forest Jekyll theme
-- Tacky Girlz WooCommerce store
-
-**🏫 Now Learing:**
-- Gamemaker Studio
-- Prisma & Postgres for Vercel
-
-**📖 Reading:**
-- *The Ecology of Freedom* by Murray Bookchin
-
-**😄 My pronouns:** he/him
-
-**🏙 Location:** Brooklyn
-
 ### TECH STACK
 
 [<img src="https://img.shields.io/badge/JavaScript-323330?style=flat&logo=javascript&logoColor=F7DF1E" alt="JavaScript">](https://ian-pvd.github.io/resume)
