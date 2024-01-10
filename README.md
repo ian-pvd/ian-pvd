@@ -10,7 +10,6 @@ I started working with CSS, PHP & MySQL as a professional web developer in 2009,
 [<img src="https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB" alt="React.js">](https://ian-pvd.github.io/resume)
 [<img src="https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white" alt="TypeScript">](https://ian-pvd.github.io/resume)
 [<img src="https://img.shields.io/badge/next%20js-000000?style=flat&logo=nextdotjs&logoColor=white" alt="Next.js">](https://ian-pvd.github.io/resume)
-[<img src="https://img.shields.io/badge/Node%20js-339933?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js">](https://ian-pvd.github.io/resume)
 
 [<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3">](https://ian-pvd.github.io/portfolio/)
 [<img src="https://img.shields.io/badge/postcss-DD3A0A?style=flat&logo=postcss&logoColor=white" alt="PostCSS">](https://ian-pvd.github.io/portfolio/)
@@ -22,6 +21,7 @@ I started working with CSS, PHP & MySQL as a professional web developer in 2009,
 [<img src="https://img.shields.io/badge/Gutenberg-white?style=flat&logo=wordpress&logoColor=black" alt="wordpress">](https://github.com/ian-pvd?tab=repositories)
 
 [<img src="https://img.shields.io/badge/GIT-E44C30?style=flat&logo=git&logoColor=white" alt="Git">](https://github.com/ian-pvd)
+[<img src="https://img.shields.io/badge/Node%20js-339933?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js">](https://ian-pvd.github.io/resume)
 [<img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white" alt="Vercel">](https://github.com/ian-pvd)
 
 ### MY WORK
