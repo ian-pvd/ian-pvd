@@ -12,10 +12,10 @@ I started working with CSS, PHP & MySQL as a professional web developer in 2009,
 [<img src="https://img.shields.io/badge/next%20js-000000?style=flat&logo=nextdotjs&logoColor=white" alt="Next.js">](https://ian-pvd.github.io/resume)
 [<img src="https://img.shields.io/badge/Node%20js-339933?style=flat&logo=nodedotjs&logoColor=white" alt="Node.js">](https://ian-pvd.github.io/resume)
 
-[<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3">](https://ian-pvd.github.com/portfolio)
-[<img src="https://img.shields.io/badge/postcss-DD3A0A?style=flat&logo=postcss&logoColor=white" alt="PostCSS">](https://ian-pvd.github.com/portfolio)
-[<img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white" alt="Sass">](https://ian-pvd.github.com/portfolio)
-[<img src="https://img.shields.io/badge/stylelint-000?style=flat&logo=stylelint&logoColor=white" alt="Stylelint">](https://ian-pvd.github.com/portfolio)
+[<img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3">](https://ian-pvd.github.io/portfolio/)
+[<img src="https://img.shields.io/badge/postcss-DD3A0A?style=flat&logo=postcss&logoColor=white" alt="PostCSS">](https://ian-pvd.github.io/portfolio/)
+[<img src="https://img.shields.io/badge/Sass-CC6699?style=flat&logo=sass&logoColor=white" alt="Sass">](https://ian-pvd.github.io/portfolio/)
+[<img src="https://img.shields.io/badge/stylelint-000?style=flat&logo=stylelint&logoColor=white" alt="Stylelint">](https://ian-pvd.github.io/portfolio/)
 
 [<img src="https://img.shields.io/badge/PHP-777BB4?style=flat&logo=php&logoColor=white" alt="PHP">](https://github.com/ian-pvd?tab=repositories)
 [<img src="https://img.shields.io/badge/Wordpress-21759B?style=flat&logo=wordpress&logoColor=white" alt="wordpress">](https://github.com/ian-pvd?tab=repositories)
@@ -26,7 +26,7 @@ I started working with CSS, PHP & MySQL as a professional web developer in 2009,
 
 ### MY WORK
 
-[<img src="https://img.shields.io/badge/ian--pvd-305030?style=for-the-badge&logo=github&logoColor=white" alt="ian-pvd page">](https://pvdindustrial.com)
+[<img src="https://img.shields.io/badge/ian--pvd-305030?style=for-the-badge&logo=github&logoColor=white" alt="ian-pvd page">](https://ian-pvd.github.io/)
 [<img src="https://img.shields.io/badge/Portfolio-6c936c?style=for-the-badge" alt="Portfolio">](https://ian-pvd.github.io/portfolio/)
 [<img src="https://img.shields.io/badge/Projects-6c936c?style=for-the-badge" alt="Projects">](https://github.com/ian-pvd?tab=repositories)
 [<img src="https://img.shields.io/badge/Resume-6c936c?style=for-the-badge" alt="Resume">](https://ian-pvd.github.io/resume/)
