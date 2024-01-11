@@ -2,7 +2,7 @@
 
 :wave:  hello. My name is Ian, and I'm a full-stack web developer.
 
-I'vd worked with CSS, PHP & MySQL as a professional web developer since 2009, and have 11 years experience working remotely for [WordPress VIP](https://wpvip.com/) partner agencies. You can check out my [portfolio](https://ian-pvd.github.io/portfolio/), view my [resume](https://ian-pvd.github.io/resume/), browse my [git repositories](https://github.com/ian-pvd?tab=repositories&sort=), read some [blog posts](https://ian-pvd.github.io/posts/), send me an [email](mailto:ianpvd+gh@gmail.com), or [tweet](https://www.twitter.com/ian_pvd) at me. I'm avialible [for hire](https://ian-pvd.github.io/contact/#hire-me) and ready to join a remote team as a front-end engineer.
+I started working with CSS, PHP & MySQL as a professional web developer in 2009, and have 11 years experience working remotely for [WordPress VIP](https://wpvip.com/) partner agencies. You can check out my [portfolio](https://ian-pvd.github.io/portfolio/), view my [resume](https://ian-pvd.github.io/resume/), browse my [git repositories](https://github.com/ian-pvd?tab=repositories&sort=), read some [blog posts](https://ian-pvd.github.io/posts/), send me an [email](mailto:ianpvd+gh@gmail.com), or [tweet](https://www.twitter.com/ian_pvd) at me. I'm avialible [for hire](https://ian-pvd.github.io/contact/#hire-me) and ready to join a remote team as a front-end engineer.
 
 ### TECH STACK
 
