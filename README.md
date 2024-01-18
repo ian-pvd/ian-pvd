@@ -1,6 +1,6 @@
 # :wave:  hello.
 
-My name is Ian, and I’m a Brooklyn-based web developer with 11 years experience working remotely for [WordPress VIP](https://wpvip.com/) partner agencies. I've been fascinated by computers since '96. I'm still impressed with code, and how it can turn ideas into tools that other people can use.
+My name is Ian, and I’m a Brooklyn-based full-stack web developer with 11 years experience working remotely for [WordPress VIP](https://wpvip.com/) partner agencies. I've been fascinated by computers since '96. I'm still impressed with code, and how it can turn ideas into tools that other people can use.
 
 You can check out my [portfolio](https://ian-pvd.github.io/portfolio/), view my [resume](https://ian-pvd.github.io/resume/), browse my [git repositories](https://github.com/ian-pvd?tab=repositories&sort=), read some [blog posts](https://ian-pvd.github.io/posts/), send me an [email](mailto:ianpvd+gh@gmail.com), or [tweet](https://www.twitter.com/ian_pvd) at me.
 
